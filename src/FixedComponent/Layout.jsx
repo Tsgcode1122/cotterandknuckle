@@ -1,8 +1,8 @@
 import React from "react";
 import { Outlet, useLocation } from "react-router-dom";
+import Navbar from "./Navbar/Navbar";
 
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+
 
 const Layout = () => {
   const location = useLocation();
@@ -13,9 +13,9 @@ const Layout = () => {
 
   return (
     <>
-      {!isHomePage && !isAdminPage && !isAll && <Navbar />}
+<Navbar/>
       <Outlet />
-      {!isAdminPage && !isAll && <Footer />}
+      {/* {!isAdminPage && !isAll && <Footer />} */}
     </>
   );
 };

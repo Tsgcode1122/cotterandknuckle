@@ -1,10 +1,12 @@
 // theme.js
+
 export const breakpoints = {
-  xs: "679px", // Extra small (phones)
-  sm: "767px",
-  m: "909px",
-  md: "1023px", // Medium (tablets)
-  lg: "1204px", // Large (laptops)
-  xl: "1535px", // Extra large (desktops)
-  xxl: "1536px", // XXL (4K screens)
+  mobileS: "480px",      // Small phones
+  mobileM: "576px",      // Medium phones
+  mobileL: "679px",      // Large phones
+  tablet: "768px",       // Tablets
+  laptop: "1024px",      // Small laptops
+  laptopL: "1200px",     // Large laptops
+  desktop: "1440px",     // Desktops
+  desktopXL: "1920px",   // Extra large screens (Full HD / 4K)
 };

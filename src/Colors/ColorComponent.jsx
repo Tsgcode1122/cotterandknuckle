@@ -9,6 +9,7 @@ export const Colors = {
   purple: "#7943BA",
   white: "#FFFFFF",
   black: "#000000",
+  lightCream: "#F6F2F2", 
 };
 
 export const Shadows = {
