@@ -4,12 +4,14 @@ export const Colors = {
   primaryBlue: "#0166FF",
   deepBlue: "#0B2C6B",
   softBlue: "#E4E7FF",
+  lightBlue: "#F2F7FF",
   brightBlue: "#2866FF",
   yellow: "#FBCB01",
   purple: "#7943BA",
   white: "#FFFFFF",
   black: "#000000",
-  lightCream: "#F6F2F2", 
+  lightCream: "#F6F2F2",
+  gray: "#6B7280",
 };
 
 export const Shadows = {
@@ -46,7 +48,7 @@ export const Gradients = {
       #0166FF 0%,
       #E4E7FF 100%
     )
-  `
+  `,
 };
 
 export default { Colors, Shadows, Gradients };

@@ -11,7 +11,7 @@ const WhyUs = () => {
   return (
     <SectionDiv>
       <Wrapper>
-        <Label>Why Cotter and Knuckly</Label>
+        <Label>Why Cotter&Knuckly</Label>
         <MainHeading>
           Built to Deliver Light Comfort Where It’s Needed Most
         </MainHeading>
@@ -24,29 +24,36 @@ const WhyUs = () => {
         <CardGrid>
           <Card>
             <CardImage src={img1} alt="Reliable Engines" />
-            <CardTitle>Certified Engineers</CardTitle>
-            <CardDesc>
-              All our installations and repairs are handled by licensed,
-              experienced professionals who understand the terrain.
-            </CardDesc>
+            <Group>
+              <CardTitle>Certified Engineers</CardTitle>
+              <CardDesc>
+                All our installations and repairs are handled by licensed,
+                experienced professionals who understand the terrain.
+              </CardDesc>
+            </Group>
           </Card>
 
           <Card>
             <CardImage src={img2} alt="Expert Team" />
-            <CardTitle>Reliable Equipment & Parts</CardTitle>
-            <CardDesc>
-              We supply and install only trusted generator brands and original
-              parts that last, so your power never falters.
-            </CardDesc>
+            <Group>
+              <CardTitle>Reliable Equipment & Parts</CardTitle>
+
+              <CardDesc>
+                We supply and install only trusted generator brands and original
+                parts that last, so your power never falters.
+              </CardDesc>
+            </Group>
           </Card>
 
           <Card>
             <CardImage src={img3} alt="24/7 Support" />
-            <CardTitle>24/7 Technical Support</CardTitle>
-            <CardDesc>
-              We’re always just a call away — for emergencies, routine checks,
-              or spare parts delivery, day or night.
-            </CardDesc>
+            <Group>
+              <CardTitle>24/7 Technical Support</CardTitle>
+              <CardDesc>
+                We’re always just a call away — for emergencies, routine checks,
+                or spare parts delivery, day or night.
+              </CardDesc>
+            </Group>
           </Card>
         </CardGrid>
       </Wrapper>
@@ -61,28 +68,34 @@ const Wrapper = styled.div`
 `;
 
 const Label = styled.p`
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   color: purple;
   font-weight: 600;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
+  background: ${Colors.lightCream};
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 10px;
 `;
 
 const MainHeading = styled.h2`
   font-size: 2rem;
-  font-weight: 700;
-  color: ${Colors.deepBlue};
+  font-weight: 600;
+  color: ${Colors.black};
   margin-bottom: 1rem;
-
+  max-width: 500px;
+  margin: 0 auto 1rem auto;
+  word-break: break-word;
   @media (max-width: 768px) {
     font-size: 1.6rem;
   }
 `;
 
 const SubText = styled.p`
-  max-width: 700px;
+  max-width: 500px;
   margin: 0 auto 2rem auto;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: ${Colors.gray};
 `;
 
@@ -95,29 +108,36 @@ const CardGrid = styled.div`
 `;
 
 const Card = styled.div`
-  width: 300px;
-  padding: 1.5rem;
-  background-color: ${Colors.white};
+  width: 350px;
+  text-align: left;
+
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  text-align: center;
+  background-color: ${Colors.lightCream};
+`;
+const Group = styled.div`
+  text-align: left;
+  padding: 0.5rem;
+  background-color: ${Colors.lightCream};
 `;
 
 const CardImage = styled.img`
-  width: 80px;
-  height: 80px;
+  // width: 80px;
+  max-width: 100%;
+  height: auto;
   object-fit: contain;
-  margin-bottom: 1rem;
 `;
 
 const CardTitle = styled.h3`
-  font-size: 1.2rem;
-  color: ${Colors.primaryBlue};
-  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: ${Colors.black};
+  margin: 0.5rem;
 `;
 
 const CardDesc = styled.p`
   font-size: 0.95rem;
   color: ${Colors.gray};
   line-height: 1.5;
+  margin: 0.5rem;
 `;
