@@ -38,6 +38,7 @@ const SectionContainer = styled.div`
   @media (min-width: ${breakpoints.laptop}) {
     max-width: 1150px;
     padding: 2rem 0rem;
+
     margin: 0 auto;
   }
 

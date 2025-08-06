@@ -9,8 +9,8 @@ import { breakpoints } from "./BreakPoints";
 
 const Footer = () => {
   return (
-    <FooterWrapper>
-      <SectionDiv>
+    <SectionDiv>
+      <FooterWrapper>
         <FooterContainer>
           {/* Group 1: Logo and Address */}
           <Group>
@@ -75,8 +75,8 @@ const Footer = () => {
             <FooterLink href="#">Privacy Policy</FooterLink>
           </RightLinks>
         </BottomBar>
-      </SectionDiv>
-    </FooterWrapper>
+      </FooterWrapper>
+    </SectionDiv>
   );
 };
 
@@ -86,10 +86,12 @@ const FooterWrapper = styled.footer`
   color: ${Colors.black};
   padding: 0.2rem 1rem 1rem;
   font-size: 0.95rem;
+  max-width: 1200px;
 `;
 
 const FooterContainer = styled.div`
   display: grid;
+
   @media (min-width: ${breakpoints.tablet}) {
     grid-template-columns: 4fr 6fr;
     // padding-left: 1rem;

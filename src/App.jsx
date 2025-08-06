@@ -10,7 +10,10 @@ import { Result, Button } from "antd";
 import Layout from "./FixedComponent/Layout";
 import HomePage from "./Pages/HomePage";
 import GlobalStyle from "./FixedComponent/GlobalStyles";
-
+import ContactForm from "./Contact/ContactForm";
+import Inquiry from "./Contact/Inquiry";
+import OurServices from "./Component/OurServices";
+import AboutUs from "./Component/AboutUs";
 
 const StyledResult = styled(Result)`
   .ant-result-title {
@@ -56,8 +59,11 @@ const routes = [
       </>
     ),
     children: [
-      { index: true, path: "/", element: <HomePage/> },
-      // { path: "/about", element: <AboutPage /> },
+      { index: true, path: "/", element: <HomePage /> },
+      { path: "/contact-us", element: <ContactForm /> },
+      { path: "/inquiry", element: <Inquiry /> },
+      { path: "/services", element: <OurServices /> },
+      { path: "/about", element: <AboutUs /> },
 
       // { path: "/projects/:imageId", element: <SingleProjectDetails /> },
       // {
@@ -86,7 +92,7 @@ const router = createBrowserRouter(routes);
 const App = () => (
   <>
     {/* <PageUnderConstruction /> */}
-   <GlobalStyle/>
+    <GlobalStyle />
 
     <RouterProvider router={router} />
   </>
