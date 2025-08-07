@@ -62,7 +62,7 @@ const NavbarBig = () => {
           onMouseEnter={() => setShowProductDropdown(true)}
           onMouseLeave={() => setShowProductDropdown(false)}
         >
-          <NavLink href="#">Products</NavLink>
+          <NavLink to="/products">Products</NavLink>
           <ProductDropdownMenu $visible={showProductDropdown}>
             <ProductItem>
               <img src={Kohler} alt="Engine" />

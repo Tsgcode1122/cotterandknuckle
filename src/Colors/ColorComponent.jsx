@@ -12,6 +12,7 @@ export const Colors = {
   black: "#000000",
   lightCream: "#F6F2F2",
   gray: "#6B7280",
+  lightGray: "#f5f5f5",
 };
 
 export const Shadows = {

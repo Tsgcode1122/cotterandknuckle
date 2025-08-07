@@ -14,6 +14,7 @@ import ContactForm from "./Contact/ContactForm";
 import Inquiry from "./Contact/Inquiry";
 import OurServices from "./Component/OurServices";
 import AboutUs from "./Component/AboutUs";
+import Products from "./Component/Products";
 
 const StyledResult = styled(Result)`
   .ant-result-title {
@@ -64,6 +65,7 @@ const routes = [
       { path: "/inquiry", element: <Inquiry /> },
       { path: "/services", element: <OurServices /> },
       { path: "/about", element: <AboutUs /> },
+      { path: "/products", element: <Products /> },
 
       // { path: "/projects/:imageId", element: <SingleProjectDetails /> },
       // {
