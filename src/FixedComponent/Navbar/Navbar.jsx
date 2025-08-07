@@ -1,10 +1,14 @@
-import React from 'react'
-import NavbarBig from './NavbarBig'
+import React from "react";
+import NavbarBig from "./NavbarBig";
+import NavbarSmall from "./NavbarSmall";
 
 const Navbar = () => {
   return (
-   <NavbarBig/>
-  )
-}
+    <>
+      <NavbarBig />
+      <NavbarSmall />
+    </>
+  );
+};
 
-export default Navbar
+export default Navbar;

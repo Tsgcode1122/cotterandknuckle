@@ -154,7 +154,7 @@ const NavContainer = styled.nav`
   //   border-bottom: 1px solid #e0e0e0;
   padding: 0 2rem;
 
-  @media (max-width: ${breakpoints.tablet}) {
+  @media screen and (max-width: 1000px) {
     display: none;
   }
 `;
