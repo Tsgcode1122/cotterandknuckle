@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { FaCheckCircle } from "react-icons/fa";
+import { CheckOutlined } from "@ant-design/icons";
 
 import SectionDiv from "../FixedComponent/SectionDiv";
 import { Colors } from "../Colors/ColorComponent";
@@ -13,15 +13,28 @@ import Icon3 from "../Images/f3.png";
 import Icon4 from "../Images/f4.png";
 import Icon5 from "../Images/f5.png";
 import Icon6 from "../Images/f6.png";
+import AboutImg from "../Images/AboutImg.png";
 const AboutContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 1rem;
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
   gap: 4rem;
 `;
 
+const Circle = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0;
+`;
+const SectionLast = styled.div`
+ background: ${Colors.deepBlue};
+ img{
+ max-width: 100%;
+ height: 100%;
+
+`;
 const Section = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -36,20 +49,26 @@ const Section = styled.div`
 const Image = styled.img`
   width: 100%;
   border-radius: 12px;
+  max-height: 630px;
 `;
 
 const Label = styled.p`
+  font-size: 0.7rem;
+  color: purple;
   font-weight: 600;
-  color: ${Colors.purple};
-  text-transform: uppercase;
-  letter-spacing: 1px;
   margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  background: ${Colors.lightCream};
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 10px;
 `;
 
 const Title = styled.h2`
   font-size: 2.2rem;
   color: ${Colors.black};
-  margin-bottom: 1rem;
+  margin: 1rem 0;
+  font-weight: 500;
 `;
 
 const Paragraph = styled.p`
@@ -71,11 +90,15 @@ const ServiceItem = styled.li`
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   color: ${Colors.black};
-  background: ${Colors.lightBlue};
-  padding: 0.75rem 1rem;
+  font-weight: 300;
+  padding: 0.1rem 0rem;
   border-radius: 8px;
+  img {
+    max-width: 100%;
+    height: 40px;
+  }
 `;
 
 const AimList = styled.ul`
@@ -84,6 +107,12 @@ const AimList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  svg {
+    color: ${Colors.yellow};
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+  }
 `;
 
 const AimItem = styled.li`
@@ -91,85 +120,96 @@ const AimItem = styled.li`
   align-items: flex-start;
   gap: 0.75rem;
   font-size: 1rem;
+  font-weight: 300;
+  font-size: 1.2rem;
   color: ${Colors.black};
 `;
 
 const AboutUs = () => {
   return (
-    <SectionDiv>
-      <AboutContainer>
-        <Section>
-          <Image src={About1} alt="Cotter & Knuckle Team" />
-          <div>
-            <Label>Our Story</Label>
-            <Title>Powering Trust Since 2007</Title>
-            <Paragraph>
-              Cotter & Knuckle Engineering Limited is a leading dealer of power
-              generation systems based in Lagos, Western Nigeria. We deliver
-              fast, reliable, and proven energy solutions to corporate, private,
-              governmental, and non-governmental clients across Nigeria and
-              beyond. Founded in January 2007, we specialize in:
-            </Paragraph>
-            <ServiceList>
-              <ServiceItem>
-                <img src={Icon1} alt="Power Generator Icon" />
-                Power generator sales, installation, repair, and service
-              </ServiceItem>
-              <ServiceItem>
-                <img src={Icon2} alt="Power Generator Icon" /> ATS systems
-                (sales, installation, troubleshooting)
-              </ServiceItem>
-              <ServiceItem>
-                <img src={Icon3} alt="Power Generator Icon" /> Switchgear and
-                changeover panel solutions
-              </ServiceItem>
-              <ServiceItem>
-                <img src={Icon4} alt="Power Generator Icon" />
-                Electrical wiring, and mechanical diagnostics
-              </ServiceItem>
-              <ServiceItem>
-                <img src={Icon5} alt="Power Generator Icon" /> Deep Sea
-                Electronics models: 7210, 6110, e.t.c
-              </ServiceItem>
-              <ServiceItem>
-                <img src={Icon6} alt="Power Generator Icon" /> Power Wizard
-                panels such as 1.0, 1.1, etc.
-              </ServiceItem>
-            </ServiceList>
-          </div>
-        </Section>
+    <>
+      <SectionDiv>
+        <AboutContainer>
+          <Section>
+            <Image src={About1} alt="Cotter & Knuckle Team" />
+            <div>
+              <Label>Our Story</Label>
+              <Title>Powering Trust Since 2007</Title>
+              <Paragraph>
+                Cotter & Knuckle Engineering Limited is a leading dealer of
+                power generation systems based in Lagos, Western Nigeria. We
+                deliver fast, reliable, and proven energy solutions to
+                corporate, private, governmental, and non-governmental clients
+                across Nigeria and beyond. Founded in January 2007, we
+                specialize in:
+              </Paragraph>
+              <ServiceList>
+                <ServiceItem>
+                  <img src={Icon1} alt="Power Generator Icon" />
+                  Power generator sales, installation, repair, and service
+                </ServiceItem>
+                <ServiceItem>
+                  <img src={Icon2} alt="Power Generator Icon" /> ATS systems
+                  (sales, installation, troubleshooting)
+                </ServiceItem>
+                <ServiceItem>
+                  <img src={Icon3} alt="Power Generator Icon" /> Switchgear and
+                  changeover panel solutions
+                </ServiceItem>
+                <ServiceItem>
+                  <img src={Icon4} alt="Power Generator Icon" />
+                  Electrical wiring, and mechanical diagnostics
+                </ServiceItem>
+                <ServiceItem>
+                  <img src={Icon5} alt="Power Generator Icon" /> Deep Sea
+                  Electronics models: 7210, 6110, e.t.c
+                </ServiceItem>
+                <ServiceItem>
+                  <img src={Icon6} alt="Power Generator Icon" /> Power Wizard
+                  panels such as 1.0, 1.1, etc.
+                </ServiceItem>
+              </ServiceList>
+            </div>
+          </Section>
 
-        <Section>
-          <div>
-            <Label>Our Aims</Label>
-            <Title>What Drives Us Forward</Title>
-            <AimList>
-              <AimItem>
-                <FaCheckCircle color={Colors.yellow} /> Rank among the top 10
-                Electrical & Mechanical Engineering Companies in Nigeria
-              </AimItem>
-              <AimItem>
-                <FaCheckCircle color={Colors.yellow} /> Elevate engineering
-                standards nationwide
-              </AimItem>
-              <AimItem>
-                <FaCheckCircle color={Colors.yellow} /> Improve energy access
-                and reliability in Nigeria and across Africa
-              </AimItem>
-              <AimItem>
-                <FaCheckCircle color={Colors.yellow} /> Provide solutions
-                trusted by all socioeconomic groups
-              </AimItem>
-              <AimItem>
-                <FaCheckCircle color={Colors.yellow} /> Bridge the gap between
-                underserved and affluent communities in energy access
-              </AimItem>
-            </AimList>
-          </div>
-          <Image src={About2} alt="Cotter & Knuckle Client" />
-        </Section>
-      </AboutContainer>
-    </SectionDiv>
+          <Section>
+            <div>
+              <Label>Our Aims</Label>
+              <Title>What Drives Us Forward</Title>
+              <AimList>
+                <AimItem>
+                  <CheckOutlined /> Rank among the top 10 Electrical &
+                  Mechanical Engineering Companies in Nigeria
+                </AimItem>
+                <AimItem>
+                  <CheckOutlined /> Elevate engineering standards nationwide
+                </AimItem>
+                <AimItem>
+                  <CheckOutlined /> Improve energy access and reliability in
+                  Nigeria and across Africa
+                </AimItem>
+                <AimItem>
+                  <CheckOutlined /> Provide solutions trusted by all
+                  socioeconomic groups
+                </AimItem>
+                <AimItem>
+                  <CheckOutlined /> Bridge the gap between underserved and
+                  affluent communities in energy access
+                </AimItem>
+              </AimList>
+            </div>
+            <Image src={About2} alt="Cotter & Knuckle Client" />
+          </Section>
+        </AboutContainer>
+      </SectionDiv>
+      <SectionLast>
+        <SectionDiv>
+          <Circle>
+            <img src={AboutImg} alt="Cotter & Knuckle Team" />
+          </Circle>
+        </SectionDiv>
+      </SectionLast>
+    </>
   );
 };
 

@@ -35,7 +35,7 @@ const NavbarBig = () => {
 
       <NavGroupCenter>
         <NavLink href="#">Home</NavLink>
-        <NavLink href="#">About Us</NavLink>
+        <NavLink to="/about">About Us</NavLink>
 
         <DropdownWrapper
           onMouseEnter={() => setShowDropdown(true)}
@@ -185,7 +185,7 @@ const NavGroupRight = styled.div`
   align-items: center;
 `;
 
-const NavLink = styled.a`
+const NavLink = styled(Link)`
   font-size: 1rem;
   font-weight: 500;
   color: ${Colors.black};
