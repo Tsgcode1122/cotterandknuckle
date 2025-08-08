@@ -6,6 +6,7 @@ import img1 from "../Images/icon1.png";
 import img2 from "../Images/icon2.png";
 import img3 from "../Images/icon3.png";
 import SectionDiv from "../FixedComponent/SectionDiv";
+import { breakpoints } from "../FixedComponent/BreakPoints";
 
 const WhyUs = () => {
   return (
@@ -69,7 +70,7 @@ const Wrapper = styled.div`
 
 const Label = styled.p`
   font-size: 0.7rem;
-  color: purple;
+  color: ${Colors.purple};
   font-weight: 600;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
@@ -89,6 +90,9 @@ const MainHeading = styled.h2`
   word-break: break-word;
   @media (max-width: 768px) {
     font-size: 1.6rem;
+  }
+  @media (max-width: ${breakpoints.mobileS}) {
+    font-size: 1.4rem;
   }
 `;
 
