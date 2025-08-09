@@ -164,6 +164,9 @@ const MainHeading = styled.h2`
   @media (max-width: 768px) {
     font-size: 1.6rem;
   }
+  @media (max-width: ${breakpoints.mobileL}) {
+    font-size: 1.4rem;
+  }
 `;
 
 const SubText = styled.p`
@@ -178,6 +181,9 @@ const SliderContainer = styled.div`
   overflow: hidden;
   width: 100%;
   margin: 0 0 0 auto;
+  @media (max-width: ${breakpoints.mobileM}) {
+    margin-top: -2rem;
+  }
 `;
 
 const ImageSlider = styled.div`
@@ -192,26 +198,30 @@ const ImageSlider = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
+  @media (max-width: ${breakpoints.mobileL}) {
+    margin-left: 1rem;
+  }
 `;
 
 const ImageCard = styled.div`
   flex: 0 0 auto;
   width: 380px;
   height: 300px;
+
   background-size: cover;
   background-position: center;
   border-radius: 12px;
   position: relative;
   scroll-snap-align: start;
   transition: transform 0.3s ease-in-out;
-
-  &:hover {
+  h &:hover {
     transform: scale(1.03);
   }
 
   @media (max-width: ${breakpoints.mobileM}) {
-    width: 250px;
-    height: 280px;
+    width: 320px;
+
+    height: 350px;
   }
 `;
 
@@ -291,6 +301,10 @@ const Buttom = styled.div`
   // width: 100%;
   margin-left: 3rem;
   margin-right: 3rem;
+  @media (max-width: ${breakpoints.mobileL}) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 `;
 
 const Line = styled.div`

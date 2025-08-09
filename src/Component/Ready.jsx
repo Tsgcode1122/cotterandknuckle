@@ -4,6 +4,8 @@ import SectionDiv from "../FixedComponent/SectionDiv";
 import { Colors } from "../Colors/ColorComponent";
 import img from "../Images/Readybg.png";
 import { FaCheck } from "react-icons/fa6";
+import { breakpoints } from "../FixedComponent/BreakPoints";
+
 const Ready = () => {
   return (
     <Container>
@@ -44,6 +46,11 @@ const Container = styled.div`
   background-position: center;
   padding: 2rem 0;
   color: ${Colors.white};
+  @media (max-width: ${breakpoints.mobileM}) {
+    background-repeat: no-repeat;
+
+    // background-position: center;
+  }
 `;
 const Wrapper = styled.div`
   text-align: center;
@@ -77,32 +84,47 @@ const MainHeading = styled.h2`
   @media (max-width: 768px) {
     font-size: 1.6rem;
   }
+  @media (max-width: ${breakpoints.mobileM}) {
+    font-size: 1.6rem;
+    font-weight: 550;
+    max-width: 250px;
+    margin: 0;
+  }
 `;
 
 const SubText = styled.p`
   font-size: 0.9rem;
   color: ${Colors.white};
   max-width: 400px;
-//   margin: 0 auto 2rem;
+  //   margin: 0 auto 2rem;
   ul {
     list-style: none;
     padding: 0;
+    margin: 0.2rem 0;
     li {
       margin: 0.5rem 0;
       display: flex;
       align-items: center;
       color: ${Colors.white};
-   
+
       font-weight: 500;
+      @media (max-width: ${breakpoints.mobileM}) {
+        margin: 0;
+        align-items: left;
+        text-align: left;
+        gap: 5px;
+      }
       svg {
         margin-right: 0.5rem;
-          
+
         color: ${Colors.brightBlue};
         background: ${Colors.white};
         border-radius: 50%;
         padding: 0.2rem;
         border: 1px solid ${Colors.brightBlue};
-
+      }
+    }
+  }
 `;
 const CTAWrapper = styled.div`
   display: flex;
@@ -126,6 +148,9 @@ const PrimaryCTA = styled.button`
     box-shadow: 0 4px 24px 0 rgba(0, 123, 255, 0.18);
     transform: scale(1.05);
   }
+  @media (max-width: ${breakpoints.mobileM}) {
+    font-weight: 500;
+  }
 `;
 
 const SecondaryCTA = styled.button`
@@ -146,5 +171,8 @@ const SecondaryCTA = styled.button`
     border-color: ${Colors.white};
     box-shadow: 0 2px 12px 0 rgba(0, 123, 255, 0.1);
     transform: scale(1.04);
+  }
+  @media (max-width: ${breakpoints.mobileM}) {
+    font-weight: 500;
   }
 `;

@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import img1 from "../Images/d1.png";
 import img2 from "../Images/customer.png";
 import img3 from "../Images/d4.png";
 import { Colors } from "../Colors/ColorComponent";
 import SectionDiv from "../FixedComponent/SectionDiv";
+import { breakpoints } from "../FixedComponent/BreakPoints";
 
 const customerData = [
   {
@@ -35,7 +36,7 @@ const customerData = [
 
 const Customers = () => {
   const [activeIndex, setActiveIndex] = useState(1); // Middle one is active by default
-
+  const sliderRef = useRef(null);
   return (
     <SectionDiv>
       <Wrapper>
@@ -63,6 +64,21 @@ const Customers = () => {
             </Card>
           ))}
         </CardContainer>
+        <CardContainer2>
+          <ImageSlider ref={sliderRef}>
+            {customerData.map((item, index) => (
+              <ImageCard key={index}>
+                <Content>
+                  <Testimonial isActive={activeIndex === index}>
+                    "{item.testimonial}"
+                  </Testimonial>
+                  <Name>{item.name}</Name>
+                  <Company>{item.company}</Company>
+                </Content>
+              </ImageCard>
+            ))}
+          </ImageSlider>
+        </CardContainer2>
       </Wrapper>
     </SectionDiv>
   );
@@ -97,6 +113,49 @@ const MainHeading = styled.h2`
   }
 `;
 
+const CardContainer2 = styled.div`
+  display: none;
+  @media (max-width: ${breakpoints.mobileL}) {
+    display: block;
+  }
+`;
+const ImageSlider = styled.div`
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  margin-left: 1rem;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @media (max-width: ${breakpoints.mobileL}) {
+    margin-left: 0.1rem;
+  }
+`;
+const ImageCard = styled.div`
+  flex: 0 0 auto;
+  width: 380px;
+  height: 200px;
+  background: #f3f3f3;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  position: relative;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease-in-out;
+  padding: 1rem;
+  &:hover {
+  }
+
+  @media (max-width: ${breakpoints.mobileM}) {
+    width: 290px;
+    height: 200px;
+  }
+`;
+
 const CardContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -104,6 +163,9 @@ const CardContainer = styled.div`
   align-items: center;
 
   flex-wrap: wrap;
+  @media (max-width: ${breakpoints.mobileL}) {
+    display: none;
+  }
 `;
 
 const Card = styled.div`

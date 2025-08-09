@@ -61,7 +61,7 @@ const WhyChooseUs = () => {
             <Number>
               {isVisible && <CountUp start={0} end={10} duration={20} />}k
             </Number>
-            <Label>Power Diesel generator sold</Label>
+            <Label>Diesel Generator Sold</Label>
           </StatCard>
           <StatCard>
             <IconImage src={img4} />
@@ -98,24 +98,27 @@ const StatsGrid = styled.div`
  
 
   @media screen and (max-width: 320px) {
-
+grid-template-columns: 1fr 1fr;
+  gap: 30px;
   }
   @media (min-width: 321px) and (max-width: 399px) {
-  
+  grid-template-columns: 1fr 1fr;
+    gap: 30px;
   }
   @media (min-width: 400px) and (max-width: 499px) {
-  
+  grid-template-columns: 1fr 1fr;
+   gap: 30px;
   }
   border-radius: 20px;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
   align-items: center;
   display: grid;
  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   padding: 10px 0;
   justify-content: center;
   align-items: center;
-  @media (min-width: ${breakpoints.xs}) {
+  @media (min-width: ${breakpoints.x}) {
 
   }
   @media (min-width: ${breakpoints.m}) {

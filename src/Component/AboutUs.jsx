@@ -29,11 +29,11 @@ const Circle = styled.div`
   padding: 1rem 0;
 `;
 const SectionLast = styled.div`
- background: ${Colors.deepBlue};
- img{
- max-width: 100%;
- height: 100%;
-
+  background: ${Colors.deepBlue};
+  img {
+    max-width: 100%;
+    height: 100%;
+  }
 `;
 const Section = styled.div`
   display: grid;
