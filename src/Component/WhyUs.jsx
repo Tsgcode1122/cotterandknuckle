@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 import { Colors } from "../Colors/ColorComponent";
-import img1 from "../Images/icon1.png";
-import img2 from "../Images/icon2.png";
-import img3 from "../Images/icon3.png";
+import img1 from "../Images/Icon1.png";
+import img2 from "../Images/Icon2.png";
+import img3 from "../Images/Icon3.png";
 import SectionDiv from "../FixedComponent/SectionDiv";
 import { breakpoints } from "../FixedComponent/BreakPoints";
 
