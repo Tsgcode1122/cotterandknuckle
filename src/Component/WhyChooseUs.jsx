@@ -95,40 +95,35 @@ const IconImage = styled.img`
   margin-bottom: 0.6rem;
 `;
 const StatsGrid = styled.div`
- 
-
   @media screen and (max-width: 320px) {
-grid-template-columns: 1fr 1fr;
-  gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
   }
   @media (min-width: 321px) and (max-width: 399px) {
-  grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
   }
   @media (min-width: 400px) and (max-width: 499px) {
-  grid-template-columns: 1fr 1fr;
-   gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
   }
   border-radius: 20px;
   justify-content: center;
   gap: 20px;
   align-items: center;
   display: grid;
- grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   padding: 10px 0;
   justify-content: center;
   align-items: center;
   @media (min-width: ${breakpoints.x}) {
-
   }
   @media (min-width: ${breakpoints.m}) {
-  
   }
 
   @media (min-width: ${breakpoints.lg}) {
     gap: 30px;
   }
-]
 `;
 
 const StatCard = styled.div`
@@ -158,7 +153,7 @@ const Label = styled.p`
   font-size: 14px;
   margin: 5px 0 0 0;
   font-weight: 300;
-  ]color: ${Colors.gray};
+  color: ${Colors.gray};
   @media (min-width: ${breakpoints.md}) {
     font-size: 16px;
   }
