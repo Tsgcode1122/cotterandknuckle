@@ -118,7 +118,7 @@ const ListItem = styled.li`
   margin-bottom: 1.75rem;
   color: ${Colors.black};
   @media (max-width: ${breakpoints.mobileM}) {
-    margin-bottom: 1.15rem;
+    margin-bottom: 1.25rem;
   }
   svg {
     color: ${Colors.yellow};
