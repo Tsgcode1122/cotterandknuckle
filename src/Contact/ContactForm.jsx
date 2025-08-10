@@ -9,10 +9,37 @@ import axios from "axios";
 import SectionDiv from "../FixedComponent/SectionDiv";
 import countryCodesData from "../Component/CountryCodes.json";
 import { GoInfo } from "react-icons/go";
+import { breakpoints } from "../FixedComponent/BreakPoints";
+
+const Top = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media (max-width: ${breakpoints.mobileM}) {
+    justify-content: left;
+    gap: 4rem;
+  }
+`;
+const Title = styled.h2`
+  display: none;
+
+  @media (max-width: ${breakpoints.mobileM}) {
+    font-size: 1.6rem;
+    display: block;
+
+    color: ${Colors.black};
+
+    margin: 1rem 0;
+    font-weight: 500;
+  }
+`;
 const Container = styled.div`
   display: grid;
 
   grid-template-columns: 1fr 1fr;
+  @media (max-width: ${breakpoints.mobileM}) {
+    grid-template-columns: 1fr;
+  }
   max-width: 1100px;
   margin: 0 auto;
   gap: 3rem;
@@ -31,18 +58,29 @@ const RightSection = styled.div`
   background: ${Colors.white};
   border: 20px solid ${Colors.lightBlue};
   border-radius: 12px;
+  @media (max-width: ${breakpoints.mobileM}) {
+    margin: -3rem -1rem -1rem -1rem;
+    border-radius: 0px;
+    border: 30px solid ${Colors.lightBlue};
+    padding: 2rem;
+  }
 `;
 
 const Heading = styled.h1`
   font-size: 3rem;
   font-weight: 500;
   color: ${Colors.black};
+  @media (max-width: ${breakpoints.mobileM}) {
+    font-size: 1.7rem;
+  }
 `;
 
 const Sub = styled.p`
   color: ${Colors.black};
   font-size: 1.2rem;
-  //   font-weight: 500;
+  @media (max-width: ${breakpoints.mobileM}) {
+    font-weight: 500;
+  }
 `;
 const SubText = styled.p`
   color: ${Colors.gray};
@@ -64,9 +102,10 @@ const InfoBox = styled.p`
   gap: 0.5rem;
   color: ${Colors.black};
   //   font-weight: 400;
-  svg{
+  svg {
     color: ${Colors.primaryBlue};
     font-size: 2.2rem;
+  }
 `;
 
 const ContactItem = styled.div`
@@ -74,6 +113,9 @@ const ContactItem = styled.div`
   flex-direction: column;
 
   margin: 2rem 0;
+  @media (max-width: ${breakpoints.mobileM}) {
+    margin: 1.5rem 0;
+  }
   gap: 0.75rem;
   color: ${Colors.deepBlue};
   p {
@@ -93,7 +135,7 @@ const ContactItem = styled.div`
 
 const BackArrow = styled.div`
   cursor: pointer;
-  margin-bottom: 1.5rem;
+
   color: ${Colors.black};
   display: flex;
   align-items: center;
@@ -144,9 +186,13 @@ const ContactForm = () => {
 
   return (
     <SectionDiv>
-      <BackArrow onClick={() => navigate(-1)}>
-        <FiArrowLeft size={20} />
-      </BackArrow>
+      <Top>
+        <BackArrow onClick={() => navigate(-1)}>
+          <FiArrowLeft size={20} />
+        </BackArrow>
+        <Title>Contact Us</Title>
+        <div></div>
+      </Top>
       <Container>
         <LeftSection>
           <Heading>
