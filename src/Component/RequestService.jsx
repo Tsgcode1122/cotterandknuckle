@@ -7,10 +7,14 @@ import Step2 from "../Images/how2.png";
 import Step3 from "../Images/how3.png";
 import SectionDiv from "../FixedComponent/SectionDiv";
 import { Colors, Shadows } from "../Colors/ColorComponent";
+import { breakpoints } from "../FixedComponent/BreakPoints";
 
 const Section = styled.section`
   //   background: ${Colors.lightCream};
   max-width: 1200px;
+  @media (max-width: ${breakpoints.mobileM}) {
+    margin-top: -3rem;
+  }
 `;
 
 const Heading = styled.h3`
@@ -18,12 +22,18 @@ const Heading = styled.h3`
   color: ${Colors.black};
   margin-bottom: 1rem;
   font-weight: 500;
+  @media (max-width: ${breakpoints.mobileM}) {
+    font-size: 1.6rem;
+  }
 `;
 
 const Subheading = styled.p`
   color: ${Colors.black};
   font-size: 1rem;
   margin-bottom: 3rem;
+  @media (max-width: ${breakpoints.mobileM}) {
+    font-size: 0.9rem;
+  }
 `;
 
 const StepWrapper = styled.div`
@@ -48,6 +58,9 @@ const Step = styled.div`
   display: grid;
   grid-template-columns: 5.5fr 4.5fr;
   gap: 2rem;
+  @media (max-width: ${breakpoints.mobileM}) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const StepContent = styled.div`
@@ -60,7 +73,9 @@ const StepImage = styled.img`
   max-width: 500px;
   max-height: 250px;
   object-fit: cover;
-  //   box-shadow: ${Shadows.blueShadow};
+  @media (max-width: ${breakpoints.mobileM}) {
+    margin-top: -2rem;
+  }
 `;
 
 const StepNumber = styled.p`
@@ -86,6 +101,9 @@ const StepDescription = styled.p`
   color: ${Colors.gray};
   margin-bottom: 1rem;
   margin-top: 0rem;
+  @media (max-width: ${breakpoints.mobileM}) {
+    margin-top: -0.2rem;
+  }
 `;
 
 const List = styled.ul`
@@ -99,7 +117,9 @@ const ListItem = styled.li`
   gap: 0.5rem;
   margin-bottom: 1.75rem;
   color: ${Colors.black};
-
+  @media (max-width: ${breakpoints.mobileM}) {
+    margin-bottom: 1.15rem;
+  }
   svg {
     color: ${Colors.yellow};
     // margin-top: 3px;

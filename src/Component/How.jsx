@@ -160,6 +160,7 @@ const Label = styled.p`
   background: ${Colors.lightCream};
   display: inline-block;
   padding: 0.3rem 0.8rem;
+
   border-radius: 10px;
 `;
 

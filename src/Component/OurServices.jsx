@@ -13,6 +13,8 @@ import { Colors } from "../Colors/ColorComponent";
 import SectionDiv from "../FixedComponent/SectionDiv";
 import { FiArrowLeft } from "react-icons/fi";
 import RequestService from "./RequestService";
+import { breakpoints } from "../FixedComponent/BreakPoints";
+
 const services = [
   {
     icon: generator,
@@ -112,6 +114,9 @@ const Title = styled.h1`
   font-size: 2rem;
   font-weight: 600;
   color: ${Colors.black};
+  @media (max-width: ${breakpoints.mobileM}) {
+    font-size: 1.6rem;
+  }
 `;
 
 const Grid = styled.div`
@@ -147,11 +152,17 @@ const CardTitle = styled.h3`
   color: ${Colors.black};
   margin: 0;
   font-weight: 500;
+  @media (max-width: ${breakpoints.mobileM}) {
+    font-size: 1.15rem;
+  }
 `;
 
 const Description = styled.p`
   color: ${Colors.gray};
   font-size: 0.95rem;
+  @media (max-width: ${breakpoints.mobileM}) {
+    font-size: 0.85rem;
+  }
 `;
 
 const OrderButton = styled(Button)`
