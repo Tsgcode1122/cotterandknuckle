@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
 import { Button } from "antd";
 import Img from "../Images/hero3.png";
+
 const productsData = [
   {
     productCategory: "Generators",
@@ -236,6 +237,9 @@ const Top = styled.div`
   align-items: center;
   margin-bottom: 2rem;
   gap: 13rem;
+  @media (max-width: ${breakpoints.mobileM}) {
+    gap: 3rem;
+  }
 `;
 
 const Title = styled.h4`
@@ -243,6 +247,9 @@ const Title = styled.h4`
   margin: 0rem;
   font-weight: 500;
   color: ${Colors.black};
+  @media (max-width: ${breakpoints.mobileM}) {
+    font-size: 1.6rem;
+  }
 `;
 const ProductDisplay = styled.div`
   display: grid;
@@ -250,14 +257,29 @@ const ProductDisplay = styled.div`
   grid-template-columns: 1fr 4fr;
   flex-wrap: wrap;
   width: 100%;
-  //   margin: 0 auto;
+  @media (max-width: ${breakpoints.mobileM}) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const ProductListContainer = styled.div`
-  //   min-width: 200px;
   display: flex;
   flex-direction: column;
   gap: 25px;
+  @media (max-width: ${breakpoints.mobileM}) {
+    flex-direction: row;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 1rem;
+    margin-left: 0.2rem;
+
+    scroll-snap-type: x mandatory;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 `;
 
 const ProductItem = styled.div`
@@ -270,12 +292,20 @@ const ProductItem = styled.div`
   border-radius: 8px;
   transition: color 0.3s ease-in-out;
   background: ${({ active }) => (active ? "#e6f0ff" : "none")};
-  &:hover {
-    background: ;
+  @media (max-width: ${breakpoints.mobileM}) {
+    background: ${({ active }) => (active ? "#e6f0ff" : "#fdf9f9")};
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    white-space: nowrap;
   }
 `;
 
 const BrandShowcase = styled.div`
+  @media (max-width: ${breakpoints.mobileM}) {
+    margin-top: -2.5rem;
+  }
   h3 {
     margin-bottom: 1rem;
   }
@@ -285,6 +315,9 @@ const BrandGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
+  @media (max-width: ${breakpoints.mobileM}) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const BrandCard = styled.div`
@@ -293,7 +326,10 @@ const BrandCard = styled.div`
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   text-align: left;
-
+  @media (max-width: ${breakpoints.mobileM}) {
+    /* max-width: 330px; */
+    background: ${Colors.lightBlue};
+  }
   img {
     width: 100%;
     height: 180px;
