@@ -24,13 +24,13 @@ const Title = styled.h2`
   display: none;
 
   @media (max-width: ${breakpoints.mobileM}) {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     display: block;
 
     color: ${Colors.black};
 
     margin: 1rem 0;
-    font-weight: 500;
+    font-weight: 600;
   }
 `;
 const Container = styled.div`

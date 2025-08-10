@@ -96,7 +96,7 @@ const InfoBox = styled.p`
   margin-bottom: 1.5rem;
   max-width: 290px;
   line-height: 1.4;
-  font-size: 0.9rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -121,7 +121,7 @@ const ContactItem = styled.div`
   p {
     margin: 0;
     // max-width: 350px;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   span {
     display: flex;

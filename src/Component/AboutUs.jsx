@@ -30,6 +30,10 @@ const Circle = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 0;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
   .Small {
     display: none;
   }

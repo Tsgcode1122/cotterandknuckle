@@ -87,7 +87,7 @@ const MainHeading = styled.h2`
   @media (max-width: ${breakpoints.mobileM}) {
     font-size: 1.6rem;
     font-weight: 550;
-    max-width: 250px;
+    max-width: 270px;
     margin: 0;
   }
 `;
