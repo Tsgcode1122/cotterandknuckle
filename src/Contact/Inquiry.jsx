@@ -167,6 +167,9 @@ const serviceOptions = [
 ];
 
 const Inquiry = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   const [countryCodes, setCountryCodes] = useState([]);
   const [selectedCode, setSelectedCode] = useState("+234");
   const [states, setStates] = useState([]);

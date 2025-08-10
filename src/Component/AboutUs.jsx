@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { CheckOutlined } from "@ant-design/icons";
@@ -213,6 +213,9 @@ const BackArrow = styled.div`
   gap: 0.5rem;
 `;
 const AboutUs = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   const navigate = useNavigate();
   return (
     <>

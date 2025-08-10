@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SectionDiv from "../FixedComponent/SectionDiv";
 import styled from "styled-components";
 import { Colors } from "../Colors/ColorComponent";
@@ -189,6 +189,9 @@ const productsData = [
 ];
 
 const Products = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   const navigate = useNavigate();
   const [activeProduct, setActiveProduct] = useState(productsData[0]);
 

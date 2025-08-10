@@ -143,6 +143,9 @@ const BackArrow = styled.div`
 `;
 
 const ContactForm = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   const [countryCodes, setCountryCodes] = useState([]);
   const [selectedCode, setSelectedCode] = useState("+234");
   const navigate = useNavigate();

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { Button } from "antd";
@@ -49,6 +49,9 @@ const services = [
 ];
 
 const OurServices = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   const navigate = useNavigate();
   return (
     <>
