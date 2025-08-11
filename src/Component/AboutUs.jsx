@@ -48,6 +48,10 @@ const Circle = styled.div`
     margin: 0;
   }
 `;
+const SmallImg = styled.img`
+  max-width: 100% !important;
+  height: auto !important;
+`;
 const SectionLast = styled.div`
   background: ${Colors.deepBlue};
   img {
@@ -305,7 +309,7 @@ const AboutUs = () => {
         <SectionDiv>
           <Circle>
             <img src={AboutImg} alt="Cotter & Knuckle Team" className="Big" />
-            <img
+            <SmallImg
               src={AboutSmall}
               alt="Cotter & Knuckle Team"
               className="Small"

@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { breakpoints } from "../FixedComponent/BreakPoints";
 import { Link } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
+import Ready from "../Component/Ready";
 const BlogPage = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true); // Add loading state
@@ -128,6 +129,7 @@ const BlogPage = () => {
           )}
         </Major>
       </SectionDiv>
+      <Ready />
     </>
   );
 };

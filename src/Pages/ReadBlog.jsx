@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { breakpoints } from "../FixedComponent/BreakPoints";
 import SectionDiv from "../FixedComponent/SectionDiv";
 import { Colors } from "../Colors/ColorComponent";
+import Ready from "../Component/Ready";
 const ReadBlog = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -36,91 +37,94 @@ const ReadBlog = () => {
   const blog = post.find((blog) => blog.id === blogId);
 
   return (
-    <SectionDiv>
-      <Top>
-        <BackArrow onClick={() => navigate(-1)}>
-          <FiArrowLeft size={20} />
-        </BackArrow>
-        <Title>Read Blog</Title>
-      </Top>
-      <SubText>
-        Insights, tips, and updates on power solutions and technology
-      </SubText>
-      <Major>
-        {loading ? (
-          <LoaderContainer>
-            <Spin size="large" />
-            <p>Loading blog content...</p>
-          </LoaderContainer>
-        ) : post.length > 0 ? (
-          <Container>
-            <Main>
-              <MainFeature>
-                <StyledLink>
-                  <Topic>
-                    {blog.title}: {blog.metaDescription}
-                  </Topic>
-                  <ImageContainer>
-                    <img src={blog.imagesUrl} alt={blog.imagesAlt} />
-                  </ImageContainer>
-                  <BlogDate>
-                    {new Date(blog.createdAt).toLocaleDateString("en-US", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
-                  </BlogDate>
-                  <Writeup>
-                    <span>
-                      <Author>By {blog.author}</Author>
-                    </span>{" "}
-                    <div
-                      dangerouslySetInnerHTML={{ __html: blog.description }}
-                    />
-                  </Writeup>
-                </StyledLink>
-              </MainFeature>
-            </Main>
-            <SideContent>
-              <Intro>More News Updates</Intro>
-              <Divider />
-              {post
-                .filter((p) => p.id !== blog.id) // ✅ Exclude current blog
-                .map((post) => (
-                  <React.Fragment key={post.id}>
-                    <One key={post.id} to={`/blog/${post.id}`}>
-                      <SideImage>
-                        <img src={post.imagesUrl} alt={post.imagesAlt} />
-                      </SideImage>
-                      <OneSide>
-                        <AuthorDate>
-                          <span>{post.author}</span>
-                          <span> -{post.formattedDate}</span>
-                        </AuthorDate>
-                        <TopicMini>
-                          {post.title}: {post.metaDescription}
-                        </TopicMini>
-                      </OneSide>
-                    </One>
+    <>
+      <SectionDiv>
+        <Top>
+          <BackArrow onClick={() => navigate(-1)}>
+            <FiArrowLeft size={20} />
+          </BackArrow>
+          <Title>Read Blog</Title>
+        </Top>
+        <SubText>
+          Insights, tips, and updates on power solutions and technology
+        </SubText>
+        <Major>
+          {loading ? (
+            <LoaderContainer>
+              <Spin size="large" />
+              <p>Loading blog content...</p>
+            </LoaderContainer>
+          ) : post.length > 0 ? (
+            <Container>
+              <Main>
+                <MainFeature>
+                  <StyledLink>
+                    <Topic>
+                      {blog.title}: {blog.metaDescription}
+                    </Topic>
+                    <ImageContainer>
+                      <img src={blog.imagesUrl} alt={blog.imagesAlt} />
+                    </ImageContainer>
+                    <BlogDate>
+                      {new Date(blog.createdAt).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </BlogDate>
+                    <Writeup>
+                      <span>
+                        <Author>By {blog.author}</Author>
+                      </span>{" "}
+                      <div
+                        dangerouslySetInnerHTML={{ __html: blog.description }}
+                      />
+                    </Writeup>
+                  </StyledLink>
+                </MainFeature>
+              </Main>
+              <SideContent>
+                <Intro>More News Updates</Intro>
+                <Divider />
+                {post
+                  .filter((p) => p.id !== blog.id) // ✅ Exclude current blog
+                  .map((post) => (
+                    <React.Fragment key={post.id}>
+                      <One key={post.id} to={`/blog/${post.id}`}>
+                        <SideImage>
+                          <img src={post.imagesUrl} alt={post.imagesAlt} />
+                        </SideImage>
+                        <OneSide>
+                          <AuthorDate>
+                            <span>{post.author}</span>
+                            <span> -{post.formattedDate}</span>
+                          </AuthorDate>
+                          <TopicMini>
+                            {post.title}: {post.metaDescription}
+                          </TopicMini>
+                        </OneSide>
+                      </One>
 
-                    <Divider />
-                  </React.Fragment>
-                ))}
-            </SideContent>
-          </Container>
-        ) : (
-          <p
-            style={{
-              textAlign: "center",
-              fontSize: "18px",
-              marginTop: "20px",
-            }}
-          >
-            No Content to read yet.
-          </p>
-        )}
-      </Major>
-    </SectionDiv>
+                      <Divider />
+                    </React.Fragment>
+                  ))}
+              </SideContent>
+            </Container>
+          ) : (
+            <p
+              style={{
+                textAlign: "center",
+                fontSize: "18px",
+                marginTop: "20px",
+              }}
+            >
+              No Content to read yet.
+            </p>
+          )}
+        </Major>
+      </SectionDiv>
+      <Ready />
+    </>
   );
 };
 
