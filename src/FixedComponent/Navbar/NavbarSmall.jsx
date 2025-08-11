@@ -115,7 +115,9 @@ const NavbarSmall = () => {
             </DropdownItem>
           </DropdownContent>
         </Dropdown>
-
+        <SidebarLink to="/blog" onClick={closeSidebar}>
+          Blogs <IoIosArrowForward />
+        </SidebarLink>
         <RequestButton onClick={closeSidebar}>Request Service</RequestButton>
       </Sidebar>
       {isOpen && <Overlay ref={overlayRef} onClick={closeSidebar} />}
