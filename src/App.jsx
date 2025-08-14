@@ -5,7 +5,7 @@ import {
   RouterProvider,
   useNavigate,
 } from "react-router-dom";
-
+import ResetPasswordPage from "./Admin/ResetPasswordPage";
 import { Result, Button } from "antd";
 import Layout from "./FixedComponent/Layout";
 import HomePage from "./Pages/HomePage";
@@ -17,7 +17,8 @@ import AboutUs from "./Component/AboutUs";
 import Products from "./Component/Products";
 import BlogPage from "./Pages/BlogPage";
 import ReadBlog from "./Pages/ReadBlog";
-
+import RegisterLogin from "./Admin/RegisterLogin";
+import ProtectedAdminDashboardPage from "./Admin/ProtectedAdminDashboardPage";
 const StyledResult = styled(Result)`
   .ant-result-title {
     color: black !important;
@@ -80,14 +81,13 @@ const routes = [
 
       // { path: "/service", element: <ServicePage />, key: "service" },
       // { path: "/contact", element: <ContactForm /> },
-      // { path: "/adminlogin", element: <RegisterLogin /> },
-      // { path: "/blog", element: <BlogPage /> },
-      // { path: "/blog/:blogId", element: <ReadBlog /> },
-      // { path: "/reset-password", element: <ResetPasswordPage /> },
+      { path: "/adminlogin", element: <RegisterLogin /> },
 
-      // { path: "*", element: <InvalidPath /> },
+      { path: "/reset-password", element: <ResetPasswordPage /> },
 
-      // { path: "/admin/*", element: <ProtectedAdminDashboardPage /> },
+      { path: "*", element: <InvalidPath /> },
+
+      { path: "/admin/*", element: <ProtectedAdminDashboardPage /> },
     ],
   },
 ];

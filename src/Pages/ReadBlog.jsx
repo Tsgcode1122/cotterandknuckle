@@ -20,7 +20,7 @@ const ReadBlog = () => {
     const fetchPosts = async () => {
       try {
         const response = await fetch(
-          "https://santhotad.onrender.com/api/blogs/getBlogs"
+          "http://localhost:5009/api/blogs/getBlogs"
         );
         const data = await response.json();
         setPost(data);
@@ -44,10 +44,11 @@ const ReadBlog = () => {
             <FiArrowLeft size={20} />
           </BackArrow>
           <Title>Read Blog</Title>
+          <div></div>
         </Top>
-        <SubText>
+        {/* <SubText>
           Insights, tips, and updates on power solutions and technology
-        </SubText>
+        </SubText> */}
         <Major>
           {loading ? (
             <LoaderContainer>
@@ -65,17 +66,17 @@ const ReadBlog = () => {
                     <ImageContainer>
                       <img src={blog.imagesUrl} alt={blog.imagesAlt} />
                     </ImageContainer>
-                    <BlogDate>
-                      {new Date(blog.createdAt).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
-                    </BlogDate>
                     <Writeup>
                       <span>
                         <Author>By {blog.author}</Author>
                       </span>{" "}
+                      <BlogDate>
+                        {new Date(blog.createdAt).toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })}
+                      </BlogDate>
                       <div
                         dangerouslySetInnerHTML={{ __html: blog.description }}
                       />
@@ -137,6 +138,9 @@ const Top = styled.div`
   @media (max-width: ${breakpoints.mobileM}) {
     gap: 3rem;
   }
+  @media (min-width: ${breakpoints.mobileL}) {
+    justify-content: space-between;
+  }
 `;
 
 const Title = styled.h4`
@@ -185,7 +189,7 @@ const StyledLink = styled.div`
   padding: 10px;
   border-radius: 10px;
 
-  @media (min-width: ${breakpoints.xs}) {
+  @media (min-width: ${breakpoints.mobileL}) {
     display: block;
     text-decoration: none;
     color: black !important;
@@ -198,7 +202,7 @@ const StyledLink = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  @media (min-width: ${breakpoints.xs}) {
+  @media (min-width: ${breakpoints.mobileL}) {
     float: left;
     width: 50%;
     margin-right: 15px;
@@ -208,12 +212,11 @@ const ImageContainer = styled.div`
   img {
     width: 100%;
     height: auto;
-    @media (min-width: ${breakpoints.xs}) {
+    @media (min-width: ${breakpoints.mobileL}) {
       /* height: 310px; */
     }
     object-fit: cover;
     border-radius: 5px;
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
   }
 `;
 
@@ -238,7 +241,7 @@ const Major = styled.div`
   justify-content: center;
 `;
 const Main = styled.div`
-  @media (min-width: ${breakpoints.mobileS}) {
+  @media (min-width: ${breakpoints.mobileL}) {
     overflow-y: auto;
     height: 100vh;
     &::-webkit-scrollbar {
@@ -285,7 +288,7 @@ const MainFeature = styled.div`
   display: grid;
 
   gap: 10px;
-  @media (min-width: ${breakpoints.mobileM}) {
+  @media (min-width: ${breakpoints.laptop}) {
     margin: 0 40px 0 0;
   }
 
@@ -308,6 +311,10 @@ const Topic = styled.h4`
 
   font-weight: 500;
   margin: 0;
+  @media (min-width: ${breakpoints.laptop}) {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
 `;
 
 const Author = styled.p`
@@ -325,10 +332,10 @@ const SideContent = styled.div`
   padding: 10px;
   max-height: 60vh;
   max-width: 70%;
-  @media (min-width: ${breakpoints.xs}) {
+  @media (min-width: ${breakpoints.mobileL}) {
     max-width: 60%;
   }
-  @media (min-width: ${breakpoints.md}) {
+  @media (min-width: ${breakpoints.mobileL}) {
     max-width: 100%;
   }
   a {
@@ -385,7 +392,7 @@ const AuthorDate = styled.p`
   span {
     color: #8d8d8d !important;
   }
-  @media (min-width: ${breakpoints.xs}) {
+  @media (min-width: ${breakpoints.mobileL}) {
     font-size: 10px;
   }
 `;

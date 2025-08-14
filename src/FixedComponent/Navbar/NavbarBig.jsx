@@ -28,135 +28,164 @@ const NavbarBig = () => {
   const [showServiceDropdown, setShowServiceDropdown] = useState(false);
 
   return (
-    <NavContainer>
-      <NavGroupLeft>
-        <img src={Cotterlogo} alt="Cotter Logo" />
-      </NavGroupLeft>
+    <>
+      {" "}
+      <StyledNavbar>
+        <NavContainer>
+          <NavGroupLeft>
+            <img src={Cotterlogo} alt="Cotter Logo" />
+          </NavGroupLeft>
 
-      <NavGroupCenter>
-        <NavLink href="#">Home</NavLink>
-        <NavLink to="/about">About Us</NavLink>
+          <NavGroupCenter>
+            <NavLink href="#">Home</NavLink>
+            <NavLink to="/about">About Us</NavLink>
 
-        <DropdownWrapper
-          onMouseEnter={() => setShowDropdown(true)}
-          onMouseLeave={() => setShowDropdown(false)}
-        >
-          <NavLink href="#">Contact Us</NavLink>
-          <DropdownMenu $visible={showDropdown}>
-            <DropdownItem to="/inquiry">
-              <img src={c1} alt="Engine" />
-              <span>Inquiry</span>
-            </DropdownItem>
-            <DropdownItem to="/contact-us">
-              <img src={c2} alt="Engine" />
-              <span>Contact Us</span>
-            </DropdownItem>
-            <DropdownItem>
-              <img src={c3} alt="Engine" />
-              <span>Careers</span>
-            </DropdownItem>
-          </DropdownMenu>
-        </DropdownWrapper>
+            <DropdownWrapper
+              onMouseEnter={() => setShowDropdown(true)}
+              onMouseLeave={() => setShowDropdown(false)}
+            >
+              <NavLink href="#">Contact Us</NavLink>
+              <DropdownMenu $visible={showDropdown}>
+                <DropdownItem to="/inquiry">
+                  <img src={c1} alt="Engine" />
+                  <span>Inquiry</span>
+                </DropdownItem>
+                <DropdownItem to="/contact-us">
+                  <img src={c2} alt="Engine" />
+                  <span>Contact Us</span>
+                </DropdownItem>
+                <DropdownItem>
+                  <img src={c3} alt="Engine" />
+                  <span>Careers</span>
+                </DropdownItem>
+              </DropdownMenu>
+            </DropdownWrapper>
 
-        <DropdownWrapper
-          onMouseEnter={() => setShowProductDropdown(true)}
-          onMouseLeave={() => setShowProductDropdown(false)}
-        >
-          <NavLink to="/products">Products</NavLink>
-          <ProductDropdownMenu $visible={showProductDropdown}>
-            <ProductItem>
-              <img src={Kohler} alt="Engine" />
-              <div>
-                <span>KOHLER SDMO Brand</span>
-                <p>
-                  Available in different sizes both opened and enclosed system
-                </p>
-              </div>
-            </ProductItem>
-            <ProductItem>
-              <img src={John} alt="Brakes" />
-              <div>
-                <span>John Deere Diesel Engine</span>
-                <p>
-                  Available in different sizes both opened and enclosed system
-                </p>
-              </div>{" "}
-            </ProductItem>
-            <ProductItem>
-              <img src={geniune} alt="Battery" />
-              <div>
-                <span>Genuine Spare Parts</span>
-                <p>
-                  Available in different sizes both opened and enclosed sytem
-                </p>
-              </div>{" "}
-            </ProductItem>
-            <ViewAllCTA href="#">
-              View all our products{" "}
-              <RightOutlined style={{ marginLeft: "3px", fontSize: "12px" }} />
-            </ViewAllCTA>
-          </ProductDropdownMenu>
-        </DropdownWrapper>
+            <DropdownWrapper
+              onMouseEnter={() => setShowProductDropdown(true)}
+              onMouseLeave={() => setShowProductDropdown(false)}
+            >
+              <NavLink to="/products">Products</NavLink>
+              <ProductDropdownMenu $visible={showProductDropdown}>
+                <ProductItem>
+                  <img src={Kohler} alt="Engine" />
+                  <div>
+                    <span>KOHLER SDMO Brand</span>
+                    <p>
+                      Available in different sizes both opened and enclosed
+                      system
+                    </p>
+                  </div>
+                </ProductItem>
+                <ProductItem>
+                  <img src={John} alt="Brakes" />
+                  <div>
+                    <span>John Deere Diesel Engine</span>
+                    <p>
+                      Available in different sizes both opened and enclosed
+                      system
+                    </p>
+                  </div>{" "}
+                </ProductItem>
+                <ProductItem>
+                  <img src={geniune} alt="Battery" />
+                  <div>
+                    <span>Genuine Spare Parts</span>
+                    <p>
+                      Available in different sizes both opened and enclosed
+                      sytem
+                    </p>
+                  </div>{" "}
+                </ProductItem>
+                <ViewAllCTA href="#">
+                  View all our products{" "}
+                  <RightOutlined
+                    style={{ marginLeft: "3px", fontSize: "12px" }}
+                  />
+                </ViewAllCTA>
+              </ProductDropdownMenu>
+            </DropdownWrapper>
 
-        <DropdownWrapper
-          onMouseEnter={() => setShowServiceDropdown(true)}
-          onMouseLeave={() => setShowServiceDropdown(false)}
-        >
-          <NavLink>Services</NavLink>
-          <ProductDropdownMenu $visible={showServiceDropdown}>
-            <ServiceItem>
-              <img src={generator} alt="Maintenance" />
-              <div>
-                <span>Generator Sales & Rentals</span>
-                <p>Reliable gensets to buy or hire</p>
-              </div>
-            </ServiceItem>
-            <ServiceItem>
-              <img src={maintenance} alt="Repairs" />
-              <div>
-                <span> Maintenance & Repairs</span>
-                <p>Fast fixes and scheduled servicing</p>
-              </div>
-            </ServiceItem>
-            <ServiceItem>
-              <img src={transformer} alt="Consulting" />
-              <div>
-                <span>Transformer Supply & Service</span>
-                <p>Original transformers for smooth power</p>
-              </div>
-            </ServiceItem>
-            <ViewAllCTA to="/services">
-              View all our services{" "}
-              <RightOutlined style={{ marginLeft: "3px", fontSize: "12px" }} />
-            </ViewAllCTA>
-          </ProductDropdownMenu>
-        </DropdownWrapper>
-      </NavGroupCenter>
+            <DropdownWrapper
+              onMouseEnter={() => setShowServiceDropdown(true)}
+              onMouseLeave={() => setShowServiceDropdown(false)}
+            >
+              <NavLink>Services</NavLink>
+              <ProductDropdownMenu $visible={showServiceDropdown}>
+                <ServiceItem>
+                  <img src={generator} alt="Maintenance" />
+                  <div>
+                    <span>Generator Sales & Rentals</span>
+                    <p>Reliable gensets to buy or hire</p>
+                  </div>
+                </ServiceItem>
+                <ServiceItem>
+                  <img src={maintenance} alt="Repairs" />
+                  <div>
+                    <span> Maintenance & Repairs</span>
+                    <p>Fast fixes and scheduled servicing</p>
+                  </div>
+                </ServiceItem>
+                <ServiceItem>
+                  <img src={transformer} alt="Consulting" />
+                  <div>
+                    <span>Transformer Supply & Service</span>
+                    <p>Original transformers for smooth power</p>
+                  </div>
+                </ServiceItem>
+                <ViewAllCTA to="/services">
+                  View all our services{" "}
+                  <RightOutlined
+                    style={{ marginLeft: "3px", fontSize: "12px" }}
+                  />
+                </ViewAllCTA>
+              </ProductDropdownMenu>
+            </DropdownWrapper>
+            <NavLink to="/blog">Blogs</NavLink>
+          </NavGroupCenter>
 
-      <NavGroupRight>
-        <RequestButton>
-          Request Service <PlusOutlined style={{ marginLeft: "5px" }} />
-        </RequestButton>
-      </NavGroupRight>
-    </NavContainer>
+          <NavGroupRight>
+            <RequestButton>
+              Request Service <PlusOutlined style={{ marginLeft: "5px" }} />
+            </RequestButton>
+          </NavGroupRight>
+        </NavContainer>
+      </StyledNavbar>
+      <NavHeight />
+    </>
   );
 };
 
 export default NavbarBig;
+const StyledNavbar = styled.div`
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999 !important;
 
+  img {
+    max-width: 100%;
+    height: 20px;
+  }
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
+`;
+const NavHeight = styled.div`
+  height: 4.2rem;
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
+`;
 const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 70px;
-
-  background-color: ${Colors.white};
-  //   border-bottom: 1px solid #e0e0e0;
+  background: ${Colors.white};
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 0 2rem;
-
-  @media screen and (max-width: 1000px) {
-    display: none;
-  }
+  z-index: 999;
 `;
 
 const NavGroupLeft = styled.div`
@@ -191,7 +220,7 @@ const NavLink = styled(Link)`
   color: ${Colors.black};
   text-decoration: none;
   transition: color 0.3s;
-
+  white-space: nowrap;
   &:hover {
     color: ${Colors.primaryBlue};
   }
