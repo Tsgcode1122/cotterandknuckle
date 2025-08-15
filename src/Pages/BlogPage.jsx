@@ -11,6 +11,9 @@ import Ready from "../Component/Ready";
 import BlogMainSmall from "../Component/BlogMainSmall";
 import BlogMainBig from "../Component/BlogMainBig";
 const BlogPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true); // Add loading state
   const [isSticky, setIsSticky] = useState(false);

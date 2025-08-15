@@ -98,6 +98,7 @@ const Top = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 20px;
 `;
 const BackArrow = styled.div`
   cursor: pointer;

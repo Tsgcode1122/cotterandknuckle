@@ -70,7 +70,7 @@ const NavbarSmall = () => {
             <DropdownItem to="/contact-us" onClick={closeSidebar}>
               Contact Us <IoIosArrowForward />
             </DropdownItem>
-            <DropdownItem to="/careers" onClick={closeSidebar}>
+            <DropdownItem to="/career" onClick={closeSidebar}>
               Careers <IoIosArrowForward />
             </DropdownItem>
           </DropdownContent>

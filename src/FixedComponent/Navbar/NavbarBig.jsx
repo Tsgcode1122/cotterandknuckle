@@ -55,7 +55,7 @@ const NavbarBig = () => {
                     <img src={c2} alt="Engine" />
                     <span>Contact Us</span>
                   </DropdownItem>
-                  <DropdownItem>
+                  <DropdownItem to="/career">
                     <img src={c3} alt="Engine" />
                     <span>Careers</span>
                   </DropdownItem>

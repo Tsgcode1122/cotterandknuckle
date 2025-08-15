@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <SectionContainer>
+    <>
       <FooterWrapper>
         <FooterContainer>
           {/* Group 1: Logo and Address */}
@@ -77,78 +77,25 @@ const Footer = () => {
           </RightLinks>
         </BottomBar>
       </FooterWrapper>
-    </SectionContainer>
+    </>
   );
 };
 
 export default Footer;
-const SectionContainer = styled.div`
-  padding: 2rem 1.5rem;
-
-  /* Leave these small sizes untouched */
-  @media screen and (max-width: 320px) {
-    padding: 2rem 0.8rem;
-  }
-
-  @media (min-width: 321px) and (max-width: 399px) {
-    padding: 2rem 1rem;
-  }
-
-  @media (min-width: 400px) and (max-width: 479px) {
-    padding: 2rem 1.2rem;
-  }
-
-  /* Start applying your breakpoints */
-  @media (min-width: ${breakpoints.mobileS}) {
-    padding: 2rem 1.5rem;
-  }
-
-  @media (min-width: ${breakpoints.mobileM}) {
-    padding: 0rem 2rem;
-  }
-
-  @media (min-width: ${breakpoints.mobileL}) {
-    padding: 10px 40px;
-  }
-
-  @media (min-width: ${breakpoints.tablet}) {
-    padding: 0rem 0rem;
-
-    margin: 0 auto;
-  }
-
-  @media (min-width: ${breakpoints.laptop}) {
-    max-width: 1150px;
-    padding: 0rem 0rem;
-
-    margin: 0 auto;
-  }
-
-  @media (min-width: ${breakpoints.desktop}) {
-    max-width: 1400px;
-    padding: 0rem 0rem;
-    margin: 0 auto;
-  }
-
-  @media (min-width: ${breakpoints.desktopXL}) {
-    max-width: 1600px;
-    padding: 0rem 0rem;
-    margin: 0 auto;
-  }
-`;
 const FooterWrapper = styled.footer`
   background: ${Colors.white};
   color: ${Colors.black};
-  padding: 0.2rem 1rem 1rem;
-  /* display: flex; */
-
+  padding: 4rem 1rem 1rem 1rem;
+  /* border-top: 0.1px solid #edecec;
+   */
   font-size: 0.95rem;
-  max-width: 1200px;
+
+  /* margin: 0 auto; */
 `;
 
 const FooterContainer = styled.div`
   display: grid;
-
+  max-width: 1400px;
   @media (min-width: ${breakpoints.tablet}) {
     grid-template-columns: 4fr 6fr;
     // padding-left: 1rem;
