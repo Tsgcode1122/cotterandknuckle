@@ -82,13 +82,13 @@ const BlogMainSmall = () => {
                         </Content>
                       </MainFeature>
                     </Link>
-                    <>{index < 1 && <Divider />}</>
+                    {/* <>{index < 1 && <Divider />}</> */}
                   </React.Fragment>
                 ))}
               </Main>
 
               <SideContent>
-                <Divider2 />
+                {/* <Divider2 /> */}
                 <Intro>More News Updates</Intro>
 
                 {posts.slice(3).map((post, index) => (
@@ -106,12 +106,8 @@ const BlogMainSmall = () => {
                         </OneSide>
                       </One>
                     </Link>
-                    <Divider2 />
-                    {/* {index !== post.length - 1 && (
-                    <p>
-                   
-                    </p>
-                  )} */}
+                    {/* <Divider2 /> */}
+                    {/* {index !== post.length - 1 && <p></p>} */}
                   </React.Fragment>
                 ))}
               </SideContent>
@@ -227,7 +223,7 @@ const ImageContainer = styled.div`
     max-width: 100%;
 
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 5px;
   }
 `;
 
@@ -235,12 +231,12 @@ const MainFeature = styled.div`
   border-radius: 10px;
   display: grid;
   gap: 10px;
-
+  border: 1.5px solid #e7e6e6;
   overflow: hidden;
-
+  padding: 10px;
   @media (min-width: ${breakpoints.mobileL}) {
     background: ${Colors.white};
-    padding: 20px;
+    padding: 10px;
     grid-template-columns: 45% 55%;
   }
   span {
@@ -278,9 +274,15 @@ const Topic = styled.h5`
 
 const Author = styled.p`
   color: black;
+  font-size: 14px;
+  /* margin: 0; */
+  padding-right: 10px;
 `;
 const Date = styled.p`
   color: ${Colors.ashBlack};
+  font-size: 14px;
+  /* margin: 0; */
+  padding-right: 10px;
 `;
 
 const SideContent = styled.div`

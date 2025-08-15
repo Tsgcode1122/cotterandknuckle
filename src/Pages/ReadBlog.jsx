@@ -41,7 +41,7 @@ const ReadBlog = () => {
       <SectionDiv>
         <Top>
           <BackArrow onClick={() => navigate(-1)}>
-            <FiArrowLeft size={20} />
+            <FiArrowLeft size={20} onClick={() => navigate(-1)} />
           </BackArrow>
           <Title>Read Blog</Title>
           <div></div>
@@ -144,10 +144,12 @@ const Top = styled.div`
 `;
 
 const Title = styled.h4`
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin: 0rem;
   font-weight: 500;
+
   color: ${Colors.black};
+  white-space: nowrap;
   @media (max-width: ${breakpoints.mobileM}) {
     font-size: 1.6rem;
   }
@@ -241,7 +243,7 @@ const Major = styled.div`
   justify-content: center;
 `;
 const Main = styled.div`
-  @media (min-width: ${breakpoints.mobileL}) {
+  @media (min-width: ${breakpoints.mobileM}) {
     overflow-y: auto;
     height: 100vh;
     &::-webkit-scrollbar {
@@ -276,7 +278,7 @@ const Container = styled.div`
 
   display: grid;
   gap: 20px;
-  @media (min-width: ${breakpoints.mobileM}) {
+  @media (min-width: ${breakpoints.mobileL}) {
     grid-template-columns: 7fr 3fr;
   }
 `;
@@ -306,7 +308,7 @@ const MainFeature = styled.div`
 
 const Topic = styled.h4`
   color: black;
-
+  margin-bottom: 20px !important;
   line-height: 1.4;
 
   font-weight: 500;
@@ -319,6 +321,7 @@ const Topic = styled.h4`
 
 const Author = styled.p`
   color: black;
+  font-style: italic;
 `;
 
 const SideContent = styled.div`
@@ -358,13 +361,13 @@ const One = styled(Link)`
   display: grid;
   gap: 10px;
   padding-bottom: 10px;
-  border-bottom: 0.7px solid #8d8d8d;
+  /* border-bottom: 0.7px solid #8d8d8d; */
   width: 100%;
   grid-template-columns: 3fr 7fr;
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+    /* box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); */
   }
 `;
 const SideImage = styled.div`

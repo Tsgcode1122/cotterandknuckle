@@ -68,30 +68,6 @@ const Top = styled.div`
   }
 `;
 
-const Title = styled.h4`
-  font-size: 2rem;
-  margin: 0rem;
-  font-weight: 500;
-  color: ${Colors.black};
-  @media (max-width: ${breakpoints.mobileM}) {
-    font-size: 1.6rem;
-  }
-`;
-const BackArrow = styled.div`
-  cursor: pointer;
-
-  color: ${Colors.black};
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-`;
-const SubText = styled.p`
-  font-size: 0.9rem;
-  text-align: left;
-  color: ${Colors.gray};
-  max-width: 400px;
-  /* margin: 0 auto; */
-`;
 const HideBig = styled.div`
   @media (min-width: ${breakpoints.laptop}) {
     display: none;

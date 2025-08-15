@@ -171,7 +171,7 @@ const Container = styled.div`
   display: grid;
   gap: 20px;
   @media (min-width: ${breakpoints.mobileL}) {
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 65% 30%;
   }
 `;
 const ImageContainer = styled.div`

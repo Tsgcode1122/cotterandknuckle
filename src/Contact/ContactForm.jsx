@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Input, Button, Form, Select } from "antd";
+import { Input, Button, Form, Select, message } from "antd";
 import { FiPhone, FiMail, FiMapPin, FiArrowLeft } from "react-icons/fi";
 import { DownOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
@@ -43,7 +43,7 @@ const Container = styled.div`
   max-width: 1100px;
   margin: 0 auto;
   gap: 3rem;
-  align-items: center;
+  /* align-items: center; */
   background-color: ${Colors.white};
 `;
 
@@ -149,7 +149,7 @@ const ContactForm = () => {
   const [countryCodes, setCountryCodes] = useState([]);
   const [selectedCode, setSelectedCode] = useState("+234");
   const navigate = useNavigate();
-
+  const [form] = Form.useForm();
   useEffect(() => {
     const codes = countryCodesData.map((country) => ({
       label: country.dial_code, // Only show the dial code
@@ -167,17 +167,28 @@ const ContactForm = () => {
     const dialCode = selectedCode.split("-")[1];
     const payload = {
       ...values,
-      phone: `${dialCode}${values.phone}`,
+      number: `${dialCode}${values.phone}`,
     };
     try {
       // POST request
       const response = await axios.post(
-        "https://your-api-endpoint.com/contact",
+        "http://localhost:5009/api/email/formSubmission",
         payload,
         {
           headers: { "Content-Type": "application/json" },
         }
       );
+      // Show success notification
+      message.success({
+        content: "Your message has been sent successfully.",
+        style: {
+          textAlign: "center",
+          marginTop: "20px",
+        },
+      });
+
+      // Reset form fields
+      form.resetFields();
       console.log("Form submitted successfully", response.data);
 
       // Example PUT request (uncomment and use as needed)
@@ -246,7 +257,12 @@ const ContactForm = () => {
         </LeftSection>
 
         <RightSection>
-          <Form layout="vertical" onFinish={onFinish} requiredMark={false}>
+          <Form
+            layout="vertical"
+            form={form}
+            onFinish={onFinish}
+            requiredMark={false}
+          >
             <Form.Item
               label={
                 <>
