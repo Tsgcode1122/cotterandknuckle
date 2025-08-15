@@ -3,7 +3,7 @@ import SectionDiv from "../FixedComponent/SectionDiv";
 import styled from "styled-components";
 import { Colors } from "../Colors/ColorComponent";
 import { breakpoints } from "../FixedComponent/BreakPoints";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
 import { Button } from "antd";
 import Img from "../Images/hero3.png";
@@ -224,7 +224,7 @@ const Products = () => {
                 <h4>{brand.name}</h4>
                 <p>{brand.miniDescription}</p>
                 <span>{brand.shortWriteup}</span>
-                <OrderButton> Order now</OrderButton>
+                <OrderButton to="/inquiry"> Order now</OrderButton>
               </BrandCard>
             ))}
           </BrandGrid>
@@ -370,10 +370,12 @@ const BackArrow = styled.div`
   align-items: center;
   gap: 0.5rem;
 `;
-const OrderButton = styled.button`
+const OrderButton = styled(Link)`
   background-color: ${Colors.primaryBlue};
   color: ${Colors.white} !important;
   border-radius: 5px;
+  font-size: 14px;
+  display: inline-block;
   padding: 0.5rem 1rem;
   border: none;
   align-self: flex-start;

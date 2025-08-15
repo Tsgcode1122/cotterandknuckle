@@ -21,26 +21,23 @@ const Top = styled.div`
   }
 `;
 const Title = styled.h2`
-  display: none;
-
+  font-size: 2.2rem;
+  color: ${Colors.black};
+  margin: 1.4rem 0;
+  font-weight: 500;
   @media (max-width: ${breakpoints.mobileM}) {
-    font-size: 1.7rem;
-    display: block;
-
-    color: ${Colors.black};
-
+    font-size: 1.6rem;
     margin: 1rem 0;
-    font-weight: 600;
   }
 `;
 const Container = styled.div`
   display: grid;
 
   grid-template-columns: 1fr 1fr;
-  @media (max-width: ${breakpoints.mobileM}) {
+  @media (max-width: ${breakpoints.tablet}) {
     grid-template-columns: 1fr;
   }
-  max-width: 1100px;
+  max-width: 1300px;
   margin: 0 auto;
   gap: 3rem;
   /* align-items: center; */
@@ -57,17 +54,18 @@ const LeftSection = styled.div`
 `;
 
 const RightSection = styled.div`
-  max-width: 400px;
+  max-width: 900px;
   padding: 1rem;
 
   background: ${Colors.white};
   border: 20px solid ${Colors.lightBlue};
   border-radius: 12px;
-  @media (max-width: ${breakpoints.mobileM}) {
+  @media (max-width: ${breakpoints.tablet}) {
     margin: -3rem -1rem -1rem -1rem;
     border-radius: 0px;
     border: 20px solid ${Colors.lightBlue};
     padding: 1rem;
+    max-width: 600px;
   }
 `;
 
@@ -75,8 +73,13 @@ const Heading = styled.h1`
   font-size: 3rem;
   font-weight: 500;
   color: ${Colors.black};
-  @media (max-width: ${breakpoints.mobileM}) {
-    font-size: 1.7rem;
+  margin: 0;
+  font-size: 1.7rem;
+  @media (min-width: ${breakpoints.tablet}) {
+    font-size: 2.4rem;
+  }
+  @media (min-width: ${breakpoints.laptop}) {
+    font-size: 2.7rem;
   }
 `;
 

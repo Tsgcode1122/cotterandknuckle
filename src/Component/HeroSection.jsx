@@ -8,6 +8,7 @@ import Img2 from "../Images/hero2.png";
 import Img3 from "../Images/hero3.png";
 import { Colors } from "../Colors/ColorComponent";
 import { breakpoints } from "../FixedComponent/BreakPoints";
+import { Link } from "react-router-dom";
 
 const slides = [
   {
@@ -72,8 +73,8 @@ const HeroSection = () => {
               {slides[index].text}
             </Text>
             <CTAWrapper>
-              <PrimaryCTA>Request Service</PrimaryCTA>
-              <SecondaryCTA>Explore Services</SecondaryCTA>
+              <PrimaryCTA to="/inquiry">Request Service</PrimaryCTA>
+              <SecondaryCTA to="/services">Explore Services</SecondaryCTA>
             </CTAWrapper>
           </Overlay>
         </SlideImage>
@@ -176,7 +177,8 @@ const CTAWrapper = styled.div`
   }
 `;
 
-const PrimaryCTA = styled.button`
+const PrimaryCTA = styled(Link)`
+  display: inline-block;
   background: ${Colors.primaryBlue};
   color: ${Colors.white};
   border: none;
@@ -188,7 +190,7 @@ const PrimaryCTA = styled.button`
   transition: background 0.3s;
 
   &:hover {
-    background: ${Colors.brightBlue};
+    background-color: ${Colors.deepBlue};
     box-shadow: 0 4px 24px 0 rgba(0, 123, 255, 0.18);
     transform: scale(1.05);
   }
@@ -199,7 +201,8 @@ const PrimaryCTA = styled.button`
   }
 `;
 
-const SecondaryCTA = styled.button`
+const SecondaryCTA = styled(Link)`
+  display: inline-block;
   background: transparent;
   color: ${Colors.white};
   padding: 0.8rem 1.5rem;

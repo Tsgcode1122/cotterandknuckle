@@ -58,7 +58,7 @@ const Step = styled.div`
   display: grid;
   grid-template-columns: 5.5fr 4.5fr;
   gap: 2rem;
-  @media (max-width: ${breakpoints.mobileM}) {
+  @media (max-width: ${breakpoints.tablet}) {
     grid-template-columns: 1fr;
   }
 `;
@@ -70,7 +70,7 @@ const StepContent = styled.div`
 const StepImage = styled.img`
   border-radius: 10px;
   width: 100%;
-  max-width: 500px;
+  max-width: 700px;
   max-height: 250px;
   object-fit: cover;
   @media (max-width: ${breakpoints.mobileM}) {

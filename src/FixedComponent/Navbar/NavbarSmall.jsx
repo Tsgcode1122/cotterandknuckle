@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import Hamburger from "hamburger-react";
 import { Link } from "react-router-dom";
-import Cotterlogo from "../../Images/cotterlogo.png";
+import Cotterlogo from "../../Images/cotlogo.png";
 import { Colors } from "../../Colors/ColorComponent";
 import { RightOutlined } from "@ant-design/icons";
 import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
@@ -118,7 +118,9 @@ const NavbarSmall = () => {
         <SidebarLink to="/blog" onClick={closeSidebar}>
           Blogs <IoIosArrowForward />
         </SidebarLink>
-        <RequestButton onClick={closeSidebar}>Request Service</RequestButton>
+        <RequestButton to="/inquiry" onClick={closeSidebar}>
+          Request Service
+        </RequestButton>
       </Sidebar>
       {isOpen && <Overlay ref={overlayRef} onClick={closeSidebar} />}
     </NavWrapper>
@@ -260,8 +262,10 @@ const DropdownItem = styled(Link)`
   }
 `;
 
-const RequestButton = styled.button`
-  margin-top: 1.5rem;
+const RequestButton = styled(Link)`
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
   background: ${Colors.primaryBlue};
   color: ${Colors.white};
   padding: 0.75rem 1.2rem;

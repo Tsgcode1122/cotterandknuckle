@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "antd";
 import { FaTools, FaSnowflake } from "react-icons/fa";
 import { GiAutoRepair, GiGearStickPattern } from "react-icons/gi";
@@ -79,7 +79,9 @@ const OurServices = () => {
 
                 <CardTitle>{service.title}</CardTitle>
                 <Description>{service.description}</Description>
-                <OrderButton size="middle">Order now</OrderButton>
+                <OrderButton to="/inquiry" size="middle">
+                  Order now
+                </OrderButton>
               </Card>
             ))}
           </Grid>
@@ -168,10 +170,13 @@ const Description = styled.p`
   }
 `;
 
-const OrderButton = styled(Button)`
+const OrderButton = styled(Link)`
+  display: inline-block;
   background-color: ${Colors.primaryBlue};
   color: ${Colors.white};
-  border: none;
+
+  border-radius: 5px;
+  padding: 8px;
   align-self: flex-start;
   &:hover {
     background-color: ${Colors.deepBlue};

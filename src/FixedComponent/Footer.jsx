@@ -6,10 +6,11 @@ import logo from "../Images/cotterlogo.png";
 import SectionDiv from "./SectionDiv";
 import { FaXTwitter } from "react-icons/fa6";
 import { breakpoints } from "./BreakPoints";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <SectionDiv>
+    <SectionContainer>
       <FooterWrapper>
         <FooterContainer>
           {/* Group 1: Logo and Address */}
@@ -35,15 +36,15 @@ const Footer = () => {
             {/* Group 2: Company */}
             <Group>
               <Heading>Company</Heading>
-              <FooterLink href="#">About Us</FooterLink>
+              <FooterLink to="/about">About Us</FooterLink>
               <FooterLink href="#">Our Mission</FooterLink>
-              <FooterLink href="#">Blog</FooterLink>
+              <FooterLink href="/blog">Blog</FooterLink>
             </Group>
 
             {/* Group 3: Help */}
             <Group>
               <Heading>Help</Heading>
-              <FooterLink href="#">FAQs</FooterLink>
+              <FooterLink href="/faqs">FAQs</FooterLink>
               <FooterLink href="#">Terms of Service</FooterLink>
               <FooterLink href="#">How it Works</FooterLink>
             </Group>
@@ -51,8 +52,8 @@ const Footer = () => {
             {/* Group 4: Join Us */}
             <Group>
               <Heading>Join Us</Heading>
-              <FooterLink href="#">Submission</FooterLink>
-              <FooterLink href="#">Contact Support</FooterLink>
+              <FooterLink href="">Submission</FooterLink>
+              <FooterLink to="/contact-us">Contact Support</FooterLink>
             </Group>
           </Grouper>
           <Socials className="mobile-socials">
@@ -76,15 +77,71 @@ const Footer = () => {
           </RightLinks>
         </BottomBar>
       </FooterWrapper>
-    </SectionDiv>
+    </SectionContainer>
   );
 };
 
 export default Footer;
+const SectionContainer = styled.div`
+  padding: 2rem 1.5rem;
+
+  /* Leave these small sizes untouched */
+  @media screen and (max-width: 320px) {
+    padding: 2rem 0.8rem;
+  }
+
+  @media (min-width: 321px) and (max-width: 399px) {
+    padding: 2rem 1rem;
+  }
+
+  @media (min-width: 400px) and (max-width: 479px) {
+    padding: 2rem 1.2rem;
+  }
+
+  /* Start applying your breakpoints */
+  @media (min-width: ${breakpoints.mobileS}) {
+    padding: 2rem 1.5rem;
+  }
+
+  @media (min-width: ${breakpoints.mobileM}) {
+    padding: 0rem 2rem;
+  }
+
+  @media (min-width: ${breakpoints.mobileL}) {
+    padding: 10px 40px;
+  }
+
+  @media (min-width: ${breakpoints.tablet}) {
+    padding: 0rem 0rem;
+
+    margin: 0 auto;
+  }
+
+  @media (min-width: ${breakpoints.laptop}) {
+    max-width: 1150px;
+    padding: 0rem 0rem;
+
+    margin: 0 auto;
+  }
+
+  @media (min-width: ${breakpoints.desktop}) {
+    max-width: 1400px;
+    padding: 0rem 0rem;
+    margin: 0 auto;
+  }
+
+  @media (min-width: ${breakpoints.desktopXL}) {
+    max-width: 1600px;
+    padding: 0rem 0rem;
+    margin: 0 auto;
+  }
+`;
 const FooterWrapper = styled.footer`
   background: ${Colors.white};
   color: ${Colors.black};
   padding: 0.2rem 1rem 1rem;
+  /* display: flex; */
+
   font-size: 0.95rem;
   max-width: 1200px;
 `;
@@ -176,7 +233,7 @@ const Heading = styled.h4`
   }
 `;
 
-const FooterLink = styled.a`
+const FooterLink = styled(Link)`
   color: ${Colors.black};
   text-decoration: none;
   font-size: 0.9rem;

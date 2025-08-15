@@ -5,6 +5,7 @@ import { Colors } from "../Colors/ColorComponent";
 import img from "../Images/Readybg.png";
 import { FaCheck } from "react-icons/fa6";
 import { breakpoints } from "../FixedComponent/BreakPoints";
+import { Link } from "react-router-dom";
 
 const Ready = () => {
   return (
@@ -28,8 +29,8 @@ const Ready = () => {
             </ul>
           </SubText>
           <CTAWrapper>
-            <PrimaryCTA>Request Service</PrimaryCTA>
-            <SecondaryCTA>Call Us Now</SecondaryCTA>
+            <PrimaryCTA to="/inquiry">Request Service</PrimaryCTA>
+            <SecondaryCTA href="tel:+2348032148519">Call Us Now</SecondaryCTA>
           </CTAWrapper>
         </Wrapper>
       </SectionDiv>
@@ -132,7 +133,8 @@ const CTAWrapper = styled.div`
   flex-wrap: wrap;
 `;
 
-const PrimaryCTA = styled.button`
+const PrimaryCTA = styled(Link)`
+  display: inline-block;
   background: ${Colors.white};
   color: ${Colors.primaryBlue};
   border: none;
@@ -153,7 +155,7 @@ const PrimaryCTA = styled.button`
   }
 `;
 
-const SecondaryCTA = styled.button`
+const SecondaryCTA = styled.a`
   background: transparent;
   color: ${Colors.white};
   padding: 0.8rem 1.5rem;

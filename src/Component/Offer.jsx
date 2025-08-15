@@ -11,6 +11,7 @@ import img4 from "../Images/hero2.png";
 import img5 from "../Images/d5.png";
 import img6 from "../Images/d4.png";
 import { breakpoints } from "../FixedComponent/BreakPoints";
+import { Link } from "react-router-dom";
 
 const Images = [
   {
@@ -102,7 +103,7 @@ const Offer = () => {
               key={index}
               style={{ backgroundImage: `url(${item.img})` }}
             >
-              <TopRightIcon>
+              <TopRightIcon to="/products">
                 <HiArrowSmallRight />
               </TopRightIcon>
               <BottomOverlay>
@@ -225,7 +226,7 @@ const ImageCard = styled.div`
   }
 `;
 
-const TopRightIcon = styled.div`
+const TopRightIcon = styled(Link)`
   position: absolute;
   top: 10px;
   right: 10px;
