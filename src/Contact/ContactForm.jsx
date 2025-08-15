@@ -175,7 +175,7 @@ const ContactForm = () => {
     try {
       // POST request
       const response = await axios.post(
-        "http://localhost:5009/api/email/formSubmission",
+        "https://cotterandknucklebackend.onrender.com/api/email/formSubmission",
         payload,
         {
           headers: { "Content-Type": "application/json" },

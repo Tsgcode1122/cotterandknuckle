@@ -55,7 +55,10 @@ const Dashboard = () => {
 
     try {
       const blogData = { ...values, description: quillText, imagesUrl };
-      await axios.post("http://localhost:5009/api/blogs/postBlogs", blogData);
+      await axios.post(
+        "https://cotterandknucklebackend.onrender.com/api/blogs/postBlogs",
+        blogData
+      );
 
       message.success({
         content: "Your message has been sent successfully.",

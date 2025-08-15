@@ -17,7 +17,7 @@ const ImageUpload = ({ imagesUrl, setImagesUrl }) => {
       formData.append("image", file);
 
       const response = await axios.post(
-        "http://localhost:5009/api/signature/upload",
+        "https://cotterandknucklebackend.onrender.com/api/signature/upload",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },

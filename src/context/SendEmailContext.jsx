@@ -13,7 +13,7 @@ export const SendEmailProvider = ({ children }) => {
     setError(null);
     try {
       const response = await axios.post(
-        "http://localhost:5009/api/email/send-verification-code",
+        "https://cotterandknucklebackend.onrender.com/api/email/send-verification-code",
         email
       );
       // Log success message or handle response

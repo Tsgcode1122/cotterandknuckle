@@ -22,7 +22,7 @@ const BlogPage = () => {
     const fetchPosts = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5009/api/blogs/getBlogs"
+          "https://cotterandknucklebackend.onrender.com/api/blogs/getBlogs"
         );
         const data = await response.json();
         setPosts(data);

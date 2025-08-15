@@ -235,7 +235,7 @@ const Inquiry = () => {
     try {
       // POST request
       const response = await axios.post(
-        "http://localhost:5009/api/email/inquirySubmission",
+        "https://cotterandknucklebackend.onrender.com/api/email/inquirySubmission",
         payload,
         {
           headers: { "Content-Type": "application/json" },

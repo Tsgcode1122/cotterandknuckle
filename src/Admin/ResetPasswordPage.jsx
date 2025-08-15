@@ -149,7 +149,7 @@ const ResetPasswordPage = () => {
   const verifyCode = async (verificationCode) => {
     try {
       const response = await axios.post(
-        "http://localhost:5009/api/reset/verify-code",
+        "https://cotterandknucklebackend.onrender.com/api/reset/verify-code",
         {
           verificationCode,
           token: JSON.parse(localStorage.getItem("verificationToken")),

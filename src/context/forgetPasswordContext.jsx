@@ -14,7 +14,7 @@ export const ForgetPasswordProvider = ({ children }) => {
     setError(null);
     try {
       const response = await axios.post(
-        "http://localhost:5009/api/auth/new-password",
+        "https://cotterandknucklebackend.onrender.com/api/auth/new-password",
         { email, newPassword }
       );
       console.log(response.data);

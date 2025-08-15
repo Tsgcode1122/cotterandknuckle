@@ -117,7 +117,9 @@ const Sidebar = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get("http://localhost:5009/api/auth/");
+        const response = await axios.get(
+          "https://cotterandknucklebackend.onrender.com/api/auth/"
+        );
         setUsers(response.data);
       } catch (error) {
         console.error("Error fetching Users:", error);
@@ -138,7 +140,7 @@ const Sidebar = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5009/api/signature/send",
+        "https://cotterandknucklebackend.onrender.com/api/signature/send",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
