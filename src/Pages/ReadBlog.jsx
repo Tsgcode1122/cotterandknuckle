@@ -15,7 +15,7 @@ const ReadBlog = () => {
   const [post, setPost] = useState([]);
   const [loading, setLoading] = useState(true);
   const { blogId } = useParams();
-
+  const navigate = useNavigate();
   useEffect(() => {
     const fetchPosts = async () => {
       try {
@@ -41,7 +41,7 @@ const ReadBlog = () => {
       <SectionDiv>
         <Top>
           <BackArrow onClick={() => navigate(-1)}>
-            <FiArrowLeft size={20} onClick={() => navigate(-1)} />
+            <FiArrowLeft size={20} />
           </BackArrow>
           <Title>Read Blog</Title>
           <div></div>
@@ -60,9 +60,7 @@ const ReadBlog = () => {
               <Main>
                 <MainFeature>
                   <StyledLink>
-                    <Topic>
-                      {blog.title}: {blog.metaDescription}
-                    </Topic>
+                    <Topic>{blog.title}</Topic>
                     <ImageContainer>
                       <img src={blog.imagesUrl} alt={blog.imagesAlt} />
                     </ImageContainer>
@@ -294,7 +292,7 @@ const MainFeature = styled.div`
     margin: 0 40px 0 0;
   }
 
-  padding: 20px;
+  /* padding: 20px; */
   @media screen and (max-width: 320px) {
     padding: 1px;
   }
@@ -309,6 +307,7 @@ const MainFeature = styled.div`
 const Topic = styled.h4`
   color: black;
   margin-bottom: 20px !important;
+  margin-top: 0 !important;
   line-height: 1.4;
 
   font-weight: 500;
