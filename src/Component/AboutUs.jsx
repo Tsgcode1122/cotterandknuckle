@@ -33,6 +33,8 @@ const Circle = styled.div`
   img {
     max-width: 100%;
     height: auto;
+    flex-shrink: 0; /* Prevent shrinking */
+    object-fit: cover;
   }
   .Small {
     display: none;
@@ -48,6 +50,12 @@ const Circle = styled.div`
     margin: 0;
   }
 `;
+const BigImg = styled.img`
+  max-width: 100% !important;
+  height: auto !important;
+  flex-shrink: 0; /* Prevent shrinking */
+  object-fit: cover;
+`;
 const SmallImg = styled.img`
   max-width: 100% !important;
   height: auto !important;
@@ -56,7 +64,7 @@ const SectionLast = styled.div`
   background: ${Colors.deepBlue};
   img {
     max-width: 100%;
-    height: 100%;
+    height: auto;
   }
 `;
 const Section = styled.div`
@@ -308,7 +316,11 @@ const AboutUs = () => {
       <SectionLast>
         <SectionDiv>
           <Circle>
-            <img src={AboutImg} alt="Cotter & Knuckle Team" className="Big" />
+            <BigImg
+              src={AboutImg}
+              alt="Cotter & Knuckle Team"
+              className="Big"
+            />
             <SmallImg
               src={AboutSmall}
               alt="Cotter & Knuckle Team"
