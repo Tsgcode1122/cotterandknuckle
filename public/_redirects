@@ -1,2 +1,10 @@
 /*    /index.html   200
+
+http://cotterandknuckleengineering.com/*  https://www.cotterandknuckleengineering.com/:splat 301!
+http://www.cotterandknuckleengineering.com/*  https://www.cotterandknuckleengineering.com/:splat 301!
+
+# Optional: Redirect root domain (if someone visits without www)
+https://cotterandknuckleengineering.com/*  https://www.cotterandknuckleengineering.com/:splat 301!
+
+
 http://* https://:splat 301!
