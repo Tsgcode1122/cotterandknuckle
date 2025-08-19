@@ -19,34 +19,28 @@ const MainHeading = styled.h2`
     font-size: 1.4rem;
   }
 `;
-const Careers = () => {
+const Mission = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   });
   return (
     <SectionDiv>
       <Wrapper>
-        <Label>Careers</Label>
+        <Label>Mission</Label>
         <MainHeading></MainHeading>
 
         <p>
-          While we don’t have any open positions at the moment, we’re always
-          excited to connect with talented professionals. If you’re passionate
-          about engineering and would like to join our team in the future, we’d
-          love to hear from you.
+          At Cotter & Knuckle Engineering, our mission is to deliver innovative,
+          reliable, and sustainable engineering solutions that empower
+          communities and industries to thrive. We are committed to excellence,
+          integrity, and continuous improvement in every project we undertake.
         </p>
-        <CTA>
-          Send your CV to{" "}
-          <a href="mailto:careers@cotterandknuckleengineering.com">
-            careers@cotterandknuckleengineering.com
-          </a>
-        </CTA>
       </Wrapper>
     </SectionDiv>
   );
 };
 
-export default Careers;
+export default Mission;
 const Label = styled.p`
   font-size: 0.7rem;
   color: ${Colors.purple} !important;

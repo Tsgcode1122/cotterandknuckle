@@ -20,6 +20,8 @@ import ReadBlog from "./Pages/ReadBlog";
 import RegisterLogin from "./Admin/RegisterLogin";
 import ProtectedAdminDashboardPage from "./Admin/ProtectedAdminDashboardPage";
 import Careers from "./Contact/Careers";
+import Mission from "./Component/Mission";
+import Faqs from "./Component/Faqs";
 const StyledResult = styled(Result)`
   .ant-result-title {
     color: black !important;
@@ -73,6 +75,8 @@ const routes = [
       { path: "/blog", element: <BlogPage /> },
       { path: "/career", element: <Careers /> },
       { path: "/blog/:blogId", element: <ReadBlog /> },
+      { path: "/mission", element: <Mission /> },
+      { path: "/faqs", element: <Faqs /> },
       // { path: "/projects/:imageId", element: <SingleProjectDetails /> },
       // {
       //   path: "/services",

@@ -37,14 +37,14 @@ const Footer = () => {
             <Group>
               <Heading>Company</Heading>
               <FooterLink to="/about">About Us</FooterLink>
-              <FooterLink href="#">Our Mission</FooterLink>
-              <FooterLink href="/blog">Blog</FooterLink>
+              <FooterLink to="/mission">Our Mission</FooterLink>
+              <FooterLink to="/blog">Blog</FooterLink>
             </Group>
 
             {/* Group 3: Help */}
             <Group>
               <Heading>Help</Heading>
-              <FooterLink href="/faqs">FAQs</FooterLink>
+              <FooterLink to="/faqs">FAQs</FooterLink>
               <FooterLink href="#">Terms of Service</FooterLink>
               <FooterLink href="#">How it Works</FooterLink>
             </Group>
