@@ -72,8 +72,8 @@ const Footer = () => {
         {/* Bottom Bar */}
         <BottomBar>
           <RightLinks>
-            <FooterLink href="#">Terms & Conditions</FooterLink>
-            <FooterLink href="#">Privacy Policy</FooterLink>
+            <FooterLink to="/terms">Terms & Conditions</FooterLink>
+            <FooterLink to="/policies">Privacy Policy</FooterLink>
           </RightLinks>
         </BottomBar>
       </FooterWrapper>
