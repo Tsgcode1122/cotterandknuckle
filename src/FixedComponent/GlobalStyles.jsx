@@ -87,7 +87,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     @media (min-width: ${breakpoints.desktop}) {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
     }
   }
 

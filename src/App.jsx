@@ -22,6 +22,7 @@ import ProtectedAdminDashboardPage from "./Admin/ProtectedAdminDashboardPage";
 import Careers from "./Contact/Careers";
 import Mission from "./Component/Mission";
 import Faqs from "./Component/Faqs";
+import Terms from "./Component/Terms";
 const StyledResult = styled(Result)`
   .ant-result-title {
     color: black !important;
@@ -77,6 +78,7 @@ const routes = [
       { path: "/blog/:blogId", element: <ReadBlog /> },
       { path: "/mission", element: <Mission /> },
       { path: "/faqs", element: <Faqs /> },
+      { path: "/terms", element: <Terms /> },
       // { path: "/projects/:imageId", element: <SingleProjectDetails /> },
       // {
       //   path: "/services",
