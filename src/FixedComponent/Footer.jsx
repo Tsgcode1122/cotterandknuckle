@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { Colors } from "../Colors/ColorComponent";
-import logo from "../Images/cotterlogo.png";
+import logo from "../Images/cotlogo.png";
 import SectionDiv from "./SectionDiv";
 import { FaXTwitter } from "react-icons/fa6";
 import { breakpoints } from "./BreakPoints";
