@@ -24,6 +24,8 @@ import Mission from "./Component/Mission";
 import Faqs from "./Component/Faqs";
 import Terms from "./Component/Terms";
 import PrivacyPolicy from "./Component/rivacyPolicy";
+import How from "./Component/How";
+import Howitwork from "./Pages/Howitwork";
 const StyledResult = styled(Result)`
   .ant-result-title {
     color: black !important;
@@ -81,6 +83,7 @@ const routes = [
       { path: "/faqs", element: <Faqs /> },
       { path: "/terms", element: <Terms /> },
       { path: "/policies", element: <PrivacyPolicy /> },
+      { path: "/how", element: <Howitwork /> },
       // { path: "/projects/:imageId", element: <SingleProjectDetails /> },
       // {
       //   path: "/services",

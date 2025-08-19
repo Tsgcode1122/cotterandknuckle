@@ -46,7 +46,7 @@ const Footer = () => {
               <Heading>Help</Heading>
               <FooterLink to="/faqs">FAQs</FooterLink>
               <FooterLink to="/terms">Terms of Service</FooterLink>
-              <FooterLink href="#">How it Works</FooterLink>
+              <FooterLink to="/how">How it Works</FooterLink>
             </Group>
 
             {/* Group 4: Join Us */}

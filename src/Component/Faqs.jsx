@@ -116,13 +116,10 @@ const Faqs = () => {
 export default Faqs;
 const Content = styled.div`
   @media screen and (max-width: 320px) {
-    padding: 1rem;
   }
   @media (min-width: 321px) and (max-width: 399px) {
-    padding: 1.3rem;
   }
   @media (min-width: 400px) and (max-width: 499px) {
-    padding: 1.5rem;
   }
 `;
 const FaqItem = styled.div`
