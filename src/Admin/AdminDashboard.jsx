@@ -1,4 +1,5 @@
 import React from "react";
+import SwipeYComponent from "../Animation/SwipeYComponent";
 import { Layout } from "antd";
 import Sidebar from "./Sidebar";
 import Dashboard from "./Dashboard";

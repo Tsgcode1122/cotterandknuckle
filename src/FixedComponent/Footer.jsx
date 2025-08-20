@@ -1,4 +1,5 @@
 import React from "react";
+
 import styled from "styled-components";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { Colors } from "../Colors/ColorComponent";
@@ -52,7 +53,7 @@ const Footer = () => {
             {/* Group 4: Join Us */}
             <Group>
               <Heading>Join Us</Heading>
-              <FooterLink href="">Submission</FooterLink>
+              <FooterLink to="/joinUs">Submission</FooterLink>
               <FooterLink to="/contact-us">Contact Support</FooterLink>
             </Group>
           </Grouper>

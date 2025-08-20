@@ -16,6 +16,7 @@ import Icon6 from "../Images/f6.png";
 import AboutImg from "../Images/AboutImg.png";
 import AboutSmall from "../Images/aboutsmall.png";
 import { breakpoints } from "../FixedComponent/BreakPoints";
+import SwipeYComponent from "../Animation/SwipeYComponent";
 
 const AboutContainer = styled.div`
   max-width: 1200px;
@@ -246,14 +247,16 @@ const AboutUs = () => {
             <div>
               <Label>Our Story</Label>
               <Title>Powering Trust Since 2007</Title>
-              <Paragraph>
-                Cotter & Knuckle Engineering Limited is a leading dealer of
-                power generation systems based in Lagos, Western Nigeria. We
-                deliver fast, reliable, and proven energy solutions to
-                corporate, private, governmental, and non-governmental clients
-                across Nigeria and beyond. Founded in January 2007, we
-                specialize in:
-              </Paragraph>
+              <SwipeYComponent direction="bottom-to-top">
+                <Paragraph>
+                  Cotter & Knuckle Engineering Limited is a leading dealer of
+                  power generation systems based in Lagos, Western Nigeria. We
+                  deliver fast, reliable, and proven energy solutions to
+                  corporate, private, governmental, and non-governmental clients
+                  across Nigeria and beyond. Founded in January 2007, we
+                  specialize in:
+                </Paragraph>
+              </SwipeYComponent>
               <ServiceList>
                 <ServiceItem>
                   <img src={Icon1} alt="Power Generator Icon" />
@@ -288,25 +291,33 @@ const AboutUs = () => {
               <Label>Our Aims</Label>
               <Title>What Drives Us Forward</Title>
               <AimList>
-                <AimItem>
-                  <CheckOutlined /> Rank among the top 10 Electrical &
-                  Mechanical Engineering Companies in Nigeria
-                </AimItem>
+                <SwipeYComponent direction="bottom-to-top">
+                  <AimItem>
+                    <CheckOutlined /> Rank among the top 10 Electrical &
+                    Mechanical Engineering Companies in Nigeria
+                  </AimItem>
+                </SwipeYComponent>
+
                 <AimItem>
                   <CheckOutlined /> Elevate engineering standards nationwide
                 </AimItem>
-                <AimItem>
-                  <CheckOutlined /> Improve energy access and reliability in
-                  Nigeria and across Africa
-                </AimItem>
+                <SwipeYComponent direction="bottom-to-top">
+                  <AimItem>
+                    <CheckOutlined /> Improve energy access and reliability in
+                    Nigeria and across Africa
+                  </AimItem>
+                </SwipeYComponent>
+
                 <AimItem>
                   <CheckOutlined /> Provide solutions trusted by all
                   socioeconomic groups
                 </AimItem>
-                <AimItem>
-                  <CheckOutlined /> Bridge the gap between underserved and
-                  affluent communities in energy access
-                </AimItem>
+                <SwipeYComponent direction="bottom-to-top">
+                  <AimItem>
+                    <CheckOutlined /> Bridge the gap between underserved and
+                    affluent communities in energy access
+                  </AimItem>
+                </SwipeYComponent>
               </AimList>
             </div>
             <Image src={About2} alt="Cotter & Knuckle Client" />

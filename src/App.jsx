@@ -1,4 +1,5 @@
 import React from "react";
+
 import styled, { createGlobalStyle } from "styled-components";
 import {
   createBrowserRouter,
@@ -26,6 +27,7 @@ import Terms from "./Component/Terms";
 import PrivacyPolicy from "./Component/rivacyPolicy";
 import How from "./Component/How";
 import Howitwork from "./Pages/Howitwork";
+import JoinUs from "./Component/JoinUs";
 const StyledResult = styled(Result)`
   .ant-result-title {
     color: black !important;
@@ -84,6 +86,7 @@ const routes = [
       { path: "/terms", element: <Terms /> },
       { path: "/policies", element: <PrivacyPolicy /> },
       { path: "/how", element: <Howitwork /> },
+      { path: "/joinUs", element: <JoinUs /> },
       // { path: "/projects/:imageId", element: <SingleProjectDetails /> },
       // {
       //   path: "/services",

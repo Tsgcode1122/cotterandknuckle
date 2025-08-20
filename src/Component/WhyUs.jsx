@@ -1,4 +1,6 @@
 import React from "react";
+
+import SwipeYComponent from "../Animation/SwipeYComponent";
 import styled from "styled-components";
 
 import { Colors } from "../Colors/ColorComponent";
@@ -16,11 +18,13 @@ const WhyUs = () => {
         <MainHeading>
           Built to Deliver Light Comfort Where It’s Needed Most
         </MainHeading>
-        <SubText>
-          Cotter & Knuckle delivers end-to-end energy solutions from expert site
-          assessment to trusted equipment, certified installation, and 24/7
-          support. Our process is built for speed and durability
-        </SubText>
+        <SwipeYComponent direction="bottom-to-top">
+          <SubText>
+            Cotter & Knuckle delivers end-to-end energy solutions from expert
+            site assessment to trusted equipment, certified installation, and
+            24/7 support. Our process is built for speed and durability
+          </SubText>
+        </SwipeYComponent>
 
         <CardGrid>
           <Card>

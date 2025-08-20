@@ -1,4 +1,5 @@
 import React from "react";
+import SwipeYComponent from "../Animation/SwipeYComponent";
 import styled from "styled-components";
 import { CheckOutlined } from "@ant-design/icons";
 

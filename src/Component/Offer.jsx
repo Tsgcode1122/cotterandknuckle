@@ -12,6 +12,7 @@ import img5 from "../Images/d5.png";
 import img6 from "../Images/d4.png";
 import { breakpoints } from "../FixedComponent/BreakPoints";
 import { Link } from "react-router-dom";
+import SwipeYComponent from "../Animation/SwipeYComponent";
 
 const Images = [
   {
@@ -89,10 +90,12 @@ const Offer = () => {
         <Wrapper>
           <Label>WHAT COTTER & KNUCKLE OFFERS</Label>
           <MainHeading>End-to-End Power Services, No Interruptions</MainHeading>
-          <SubText>
-            Delivering dependable generators, control panels, and servicing —
-            wherever energy matters most.
-          </SubText>
+          <SwipeYComponent direction="bottom-to-top">
+            <SubText>
+              Delivering dependable generators, control panels, and servicing —
+              wherever energy matters most.
+            </SubText>
+          </SwipeYComponent>
         </Wrapper>
       </SectionDiv>
 

@@ -1,4 +1,5 @@
 import React from "react";
+import SwipeYComponent from "../Animation/SwipeYComponent";
 import styled from "styled-components";
 import { breakpoints } from "./BreakPoints";
 

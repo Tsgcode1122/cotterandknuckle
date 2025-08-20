@@ -1,4 +1,5 @@
 import React from "react";
+import SwipeYComponent from "../Animation/SwipeYComponent";
 import { EditOutlined, ReadOutlined, LogoutOutlined } from "@ant-design/icons";
 import styled from "styled-components";
 import { Link, useNavigate, useLocation } from "react-router-dom";

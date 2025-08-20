@@ -1,4 +1,5 @@
 import React from "react";
+import SwipeYComponent from "../Animation/SwipeYComponent";
 import { Tabs } from "antd";
 import styled from "styled-components";
 import LoginPage from "./LoginPage";

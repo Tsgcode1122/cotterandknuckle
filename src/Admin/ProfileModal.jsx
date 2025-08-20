@@ -1,4 +1,5 @@
 import React from "react";
+import SwipeYComponent from "../Animation/SwipeYComponent";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import {

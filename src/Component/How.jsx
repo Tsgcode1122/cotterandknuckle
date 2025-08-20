@@ -1,4 +1,5 @@
 import React from "react";
+import SwipeYComponent from "../Animation/SwipeYComponent";
 import styled from "styled-components";
 
 import { Colors } from "../Colors/ColorComponent";
@@ -16,11 +17,12 @@ const How = () => {
           <MainHeading>
             Trusted Power Solutions Delivered in 4 Easy Steps
           </MainHeading>
-          <SubText>
-            From your request to final delivery, we ensure smooth, expert-driven
-            execution every step of the way.
-          </SubText>
-
+          <SwipeYComponent direction="bottom-to-top">
+            <SubText>
+              From your request to final delivery, we ensure smooth,
+              expert-driven execution every step of the way.
+            </SubText>
+          </SwipeYComponent>
           <CardGrid>
             <CardImage src={img} alt="24/7 Support" />
           </CardGrid>

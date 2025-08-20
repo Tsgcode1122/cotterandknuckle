@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+
 import {
   PlusOutlined,
   MessageOutlined,
@@ -21,6 +21,7 @@ import c2 from "../../Images/c2.png";
 import c3 from "../../Images/c3.png";
 import { Link } from "react-router-dom";
 import SectionDiv from "../SectionDiv";
+import styled from "styled-components";
 
 const NavbarBig = () => {
   const [showDropdown, setShowDropdown] = useState(false);

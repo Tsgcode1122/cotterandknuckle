@@ -1,4 +1,5 @@
 import React from "react";
+import SwipeYComponent from "../Animation/SwipeYComponent";
 import styled from "styled-components";
 import SectionDiv from "../FixedComponent/SectionDiv";
 import { Colors } from "../Colors/ColorComponent";
@@ -11,28 +12,30 @@ const Ready = () => {
   return (
     <Container>
       <SectionDiv>
-        <Wrapper>
-          {/* <Label>WHAT COTTER & KNUCKLE OFFERS</Label> */}
-          <MainHeading>Ready to Power Up? Let’s Get You Started.</MainHeading>
-          <SubText>
-            <ul>
-              <li>
-                {" "}
-                <FaCheck />
-                Need help fast? Let’s get your power up and running.
-              </li>
-              <li>
-                {" "}
-                <FaCheck />
-                We handle your power needs — anytime, anywhere
-              </li>
-            </ul>
-          </SubText>
-          <CTAWrapper>
-            <PrimaryCTA to="/inquiry">Request Service</PrimaryCTA>
-            <SecondaryCTA href="tel:+2348032148519">Call Us Now</SecondaryCTA>
-          </CTAWrapper>
-        </Wrapper>
+        <SwipeYComponent direction="bottom-to-top">
+          <Wrapper>
+            {/* <Label>WHAT COTTER & KNUCKLE OFFERS</Label> */}
+            <MainHeading>Ready to Power Up? Let’s Get You Started.</MainHeading>
+            <SubText>
+              <ul>
+                <li>
+                  {" "}
+                  <FaCheck />
+                  Need help fast? Let’s get your power up and running.
+                </li>
+                <li>
+                  {" "}
+                  <FaCheck />
+                  We handle your power needs — anytime, anywhere
+                </li>
+              </ul>
+            </SubText>
+            <CTAWrapper>
+              <PrimaryCTA to="/inquiry">Request Service</PrimaryCTA>
+              <SecondaryCTA href="tel:+2348032148519">Call Us Now</SecondaryCTA>
+            </CTAWrapper>
+          </Wrapper>
+        </SwipeYComponent>
       </SectionDiv>
     </Container>
   );
