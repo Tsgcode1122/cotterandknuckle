@@ -14,6 +14,26 @@ import Plug from "../Images/plug.jpg";
 import Bosch from "../Images/bosch.jpg";
 import Fuelfilter from "../Images/fuelfilter.jpeg";
 import Airfilter from "../Images/airfilter.jpg";
+import Abb from "../Images/abb.png";
+import Ats from "../Images/ats.jpg";
+import Lt from "../Images/lt.jpg";
+import Siemens from "../Images/siemens.jpg";
+import Mikt from "../Images/mikt.jpg";
+import Siegt from "../Images/siegt.jpg";
+import Scht from "../Images/scht.jpg";
+import Abbt from "../Images/abbt.jpeg";
+import Col from "../Images/col.jpg";
+import Nigc from "../Images/nigc.jpg";
+import Cutc from "../Images/cutc.jpg";
+import Pirelli from "../Images/pirelli.jpg";
+import Floor from "../Images/floor.png";
+import Sam from "../Images/sam.jpg";
+import Pana from "../Images/pana.jpg";
+import Lg from "../Images/lg.jpg";
+import Dse from "../Images/dse.jpg";
+import Dse2 from "../Images/dse2.jpg";
+import Dse3 from "../Images/dse3.jpg";
+import Dse4 from "../Images/dse4.jpg";
 
 const productsData = [
   {
@@ -78,25 +98,25 @@ const productsData = [
     productCategory: "Engine",
     brands: [
       {
-        image: Img,
+        image: Ats,
         name: "Schneider ATS",
         miniDescription: "100A automatic switch",
         shortWriteup: "Automatically switches between power sources.",
       },
       {
-        image: Img,
+        image: Abb,
         name: "ABB Transfer Switch",
         miniDescription: "Advanced transfer system",
         shortWriteup: "Reliable and fast power switching for homes.",
       },
       {
-        image: Img,
+        image: Lt,
         name: "L&T Panel",
         miniDescription: "Durable electrical panel",
         shortWriteup: "Customized panel for seamless load control.",
       },
       {
-        image: Img,
+        image: Siemens,
         name: "Siemens Panel",
         miniDescription: "Compact ATS panel",
         shortWriteup: "Smart automation for uninterrupted power.",
@@ -107,25 +127,25 @@ const productsData = [
     productCategory: "Panels & Transformers",
     brands: [
       {
-        image: Img,
+        image: Abbt,
         name: "ABB Transformer",
         miniDescription: "200kVA dry type transformer",
         shortWriteup: "Energy efficient for industrial applications.",
       },
       {
-        image: Img,
+        image: Scht,
         name: "Schneider Transformer",
         miniDescription: "Pad mounted transformer",
         shortWriteup: "Robust design for outdoor use.",
       },
       {
-        image: Img,
+        image: Siegt,
         name: "Siemens Transformer",
         miniDescription: "Oil-immersed transformer",
         shortWriteup: "Stable voltage regulation and durability.",
       },
       {
-        image: Img,
+        image: Mikt,
         name: "Mikano Transformer",
         miniDescription: "Low noise high efficiency",
         shortWriteup: "Ideal for commercial buildings and estates.",
@@ -134,30 +154,30 @@ const productsData = [
     ],
   },
   {
-    productCategory: "Air Conditioner",
+    productCategory: "Cables & Wiring",
     brands: [
       {
-        image: Img,
+        image: Col,
         name: "Coleman Cable",
         miniDescription: "Flexible copper wire",
         shortWriteup: "Great for residential wiring projects.",
         orderNowLink: "/order/wiring/coleman-cable",
       },
       {
-        image: Img,
+        image: Nigc,
         name: "Nigerchin Cable",
         miniDescription: "Heavy-duty PVC cable",
         shortWriteup: "Perfect for both indoor and outdoor use.",
         orderNowLink: "/order/wiring/nigerchin-cable",
       },
       {
-        image: Img,
+        image: Cutc,
         name: "Cutix Cable",
         miniDescription: "High-conductivity wire",
         shortWriteup: "Ensures uninterrupted power supply.",
       },
       {
-        image: Img,
+        image: Pirelli,
         name: "Pirelli Wire",
         miniDescription: "Heat-resistant wire",
         shortWriteup: "Suitable for industrial environments.",
@@ -168,25 +188,62 @@ const productsData = [
     productCategory: "DSE Control",
     brands: [
       {
-        image: Img,
+        image: Dse,
+        name: "DSE7320 MKII",
+        miniDescription: "Auto Mains (Utility) Failure Control Module",
+        shortWriteup:
+          "Provides advanced generator and mains monitoring with automatic start and stop functionality.",
+        orderNowLink: "/order/dse-control/dse7320-mkii",
+      },
+      {
+        image: Dse2,
+        name: "DSE7310 MKII",
+        miniDescription: "Auto Start Control Module",
+        shortWriteup:
+          "Ideal for a wide range of single and multiple generator applications.",
+        orderNowLink: "/order/dse-control/dse7310-mkii",
+      },
+      {
+        image: Dse3,
+        name: "DSE8610 MKII",
+        miniDescription: " Load Sharing Control Module",
+        shortWriteup:
+          "Supports complex power management including load demand, sequencing, and synchronization.",
+        orderNowLink: "/order/dse-control/dse8610-mkii",
+      },
+      {
+        image: Dse4,
+        name: "DSE4510 MKII",
+        miniDescription: "Manual & Auto Start Control Module",
+        shortWriteup:
+          "Compact and user-friendly controller designed for manual or auto-start applications.",
+        orderNowLink: "/order/dse-control/dse4510-mkii",
+      },
+    ],
+  },
+  {
+    productCategory: "Air Conditioner",
+    brands: [
+      {
+        image: Lg,
         name: "LG Split Unit",
         miniDescription: "1.5HP inverter AC",
         shortWriteup: "Efficient and quiet cooling system.",
       },
       {
-        image: Img,
+        image: Pana,
         name: "Panasonic Inverter",
         miniDescription: "2HP wall AC",
         shortWriteup: "Smart AC with energy-saving mode.",
       },
       {
-        image: Img,
+        image: Sam,
         name: "Samsung WindFree",
         miniDescription: "No direct breeze AC",
         shortWriteup: "Comfort without cold air blast.",
       },
       {
-        image: Img,
+        image: Floor,
         name: "Daikin Floor Standing",
         miniDescription: "Commercial use air conditioner",
         shortWriteup: "Powerful cooling for larger spaces.",
