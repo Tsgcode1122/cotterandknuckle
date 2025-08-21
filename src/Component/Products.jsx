@@ -7,25 +7,32 @@ import { Link, useNavigate } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
 import { Button } from "antd";
 import Img from "../Images/hero3.png";
+import Honda from "../Images/honda.jpg";
+import Fireman from "../Images/fireman.png";
+import Elemax from "../Images/elemax.png";
+import Plug from "../Images/plug.jpg";
+import Bosch from "../Images/bosch.jpg";
+import Fuelfilter from "../Images/fuelfilter.jpeg";
+import Airfilter from "../Images/airfilter.jpg";
 
 const productsData = [
   {
     productCategory: "Generators",
     brands: [
       {
-        image: Img,
+        image: Honda,
         name: "Honda GX390",
         miniDescription: "6.5kVA petrol generator",
         shortWriteup: "Reliable power solution for home and small businesses.",
       },
       {
-        image: Img,
-        name: "Firman ECO10990ES",
+        image: Fireman,
+        name: "Fireman ECO10990ES",
         miniDescription: "8kVA key start generator",
         shortWriteup: "Durable generator with low fuel consumption.",
       },
       {
-        image: Img,
+        image: Elemax,
         name: "Elemax SH7600EX",
         miniDescription: "7.6kVA silent generator",
         shortWriteup: "Great for residential and light commercial use.",
@@ -42,25 +49,25 @@ const productsData = [
     productCategory: "Spare Parts",
     brands: [
       {
-        image: Img,
+        image: Plug,
         name: "NGK Spark Plug",
         miniDescription: "High-performance spark plug",
         shortWriteup: "Ensures quick engine start and fuel efficiency.",
       },
       {
-        image: Img,
+        image: Bosch,
         name: "Bosch Oil Filter",
         miniDescription: "Premium oil filtration",
         shortWriteup: "Extends engine life and improves performance.",
       },
       {
-        image: Img,
+        image: Fuelfilter,
         name: "Mikuni Fuel Filter",
         miniDescription: "Universal fuel filter",
         shortWriteup: "Keeps your engine safe from impurities.",
       },
       {
-        image: Img,
+        image: Airfilter,
         name: "K&N Air Filter",
         miniDescription: "Reusable high flow filter",
         shortWriteup: "Boosts engine horsepower and performance.",
